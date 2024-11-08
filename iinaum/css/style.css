@@ -1,0 +1,140 @@
+@charset "utf-8";
+
+body {
+    /* 方眼紙模様に必須のスタイル */
+    background-image: linear-gradient(0deg, transparent calc(100% - 1px), #f0f0f0 calc(100% - 1px)),
+                      linear-gradient(90deg, transparent calc(100% - 1px), #f0f0f0 calc(100% - 1px));
+    background-size: 16px 16px;
+    background-repeat: repeat;
+    background-position: center center; 
+    /* 以下任意のスタイル */
+    padding: 20px;
+    font-family: 'ヒラギノ角ゴシック','Hiragino Sans','Arial Black',sans-serif;
+  }
+
+  .contents {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+  header {
+    height: 60px; 
+    box-sizing: border-box;
+    top: 0; 
+    left: 0; 
+    display: flex; 
+    align-items: center;
+
+
+   /* ロゴとメニューを横並びにする */
+    display: flex; 
+    justify-content:space-between;
+    width: 100%;
+}
+
+
+
+h1 {
+    font-size: 56px;
+}
+
+
+ header .nav .menu {
+        display: flex; 
+        font-size: 20px;
+}
+
+.bg_green,.bg_white {
+    width:127px;
+    height:44px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.bg_green {
+        background-color:#0C4B2F;
+        color: white;
+
+}
+
+.bg_white {
+    background-color:white;
+    color: #0C4B2F;
+    border: 1px solid #0C4B2F;
+    display: flex;
+}
+
+.line{
+display: block;
+}
+
+.line span {
+    width:30px;
+    height:1px;
+    background-color:#0C4B2F;
+    display: block;
+    position: relative;
+    top: 10px;
+}
+
+
+.line span::after {
+    content: "";
+    width:30px;
+    height:1px;
+    background-color:#0C4B2F;
+    display: block;
+    position: absolute;
+    top: 5px;
+}
+
+.line.open span {
+    transform:rotate(45deg);
+    top: 0;
+
+}
+
+.line.open span::after {
+    transform:rotate(-90deg);
+    top: 0;
+
+}
+
+.btn_nav {
+    display:flex;
+    background-color:#C3AE88;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    left: 0;
+    transform: translateX(100%);
+    color:#0C4B2F;
+    font-size: 24px;
+    align-items: center;
+    justify-content: center;
+    height: 768px;
+    gap: 3em;
+}
+
+.btn_nav ul {
+    text-align: left;
+}
+
+.btn_nav ul li {
+    line-height: 2;
+}
+
+.btn_nav .sen1 {
+    height:316px;
+    width:2px;
+    background-color: #0C4B2F;
+
+}
+
+.btn_nav.active{
+    transform: translateX(0); 
+  }
+    
+
+
+
