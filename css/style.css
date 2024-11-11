@@ -46,15 +46,14 @@ h1 {
 
 .bg_green,.bg_white {
     width:127px;
-    height:44px;
+    padding: 12px;
     box-sizing: border-box;
     text-align: center;
 }
 
 .bg_green {
-        background-color:#0C4B2F;
-        color: white;
-
+    background-color:#0C4B2F;
+    color: white;
 }
 
 .bg_white {
@@ -66,6 +65,8 @@ h1 {
 
 .line{
 display: block;
+padding: 0 5px;
+
 }
 
 .line span {
@@ -90,7 +91,8 @@ display: block;
 
 .line.open span {
     transform:rotate(45deg);
-    top: 0;
+    top: 50%;
+    padding-right: 0.5;
 
 }
 
@@ -134,6 +136,19 @@ display: block;
 .btn_nav.active{
     transform: translateX(0); 
   }
+
+.nav {
+    position: relative;
+    z-index: 100;
+}
+
+.menu.active .bg_green {
+ background-color: transparent;
+ color: transparent;
+}
+
+
+
     
 
 
