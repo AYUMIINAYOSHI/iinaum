@@ -33,6 +33,10 @@ body {
 }
 
 
+.white {
+    color:#FFFFFF;
+}
+
 
 h1 {
     font-size: 56px;
@@ -50,6 +54,18 @@ h1 {
     box-sizing: border-box;
     text-align: center;
 }
+
+
+.bg_green2 {
+    width:215px;
+    height: 47px;
+    padding: 12px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color:#0C4B2F;
+    color: white;
+}
+
 
 .bg_green {
     background-color:#0C4B2F;
@@ -147,8 +163,315 @@ padding: 0 5px;
  color: transparent;
 }
 
+.anim_1 img {
+    width: 120px;
+    height: 120px;
+}
+
+.anim_1 {
+    position: relative;
+    height: 768px;
+}
+
+.anim_1 .svg_1 {
+    position: absolute;
+    top: 300px;
+    left: 120px;
+}
+
+.anim_1 .svg_2 {
+    position: absolute;
+    top: 500px;
+    left: 20px;
+}
+
+.anim_1 .svg_3 {
+    position: absolute;
+    top: 500px;
+    right: 100px;
+}
 
 
+.anim_1 .svg_4 {
+    position: absolute;
+    top: 80px;
+    right: 0px;
+}
+
+.anim_1 .svg_5 {
+    position: absolute;
+    top: 50px;
+    left: 0px;
+}
+
+.anim_1 .svg_6 {
+    position: absolute;
+    top: 200px;
+    right: 200px;
+}
+
+.anim_1 .scrolldown1 {
+    position: absolute;
+    top: 650px;
+    left: 50%;
+}
+
+.icon {
+  padding: 5em;
+  text-align: center;
+}
+
+
+.ellipse_1 {
+    position: relative;
+    background: #0C4B2F;
+    width: 300px;
+    height: 300px;
+    border-radius: 48% 52% 20% 80% / 40% 72% 28% 60%;
+    margin: 0 auto;
+    z-index: 2;
+}
+
+
+.articulate h2 {
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    margin: 0 auto;
+    line-height: 150%;
+    font-size: 4em;
+}
+
+.articulate_en {
+    padding: 5em;
+}
+
+.articulate_en h2 {
+    margin: 0 auto;
+    line-height: 150%;
+    font-size: 4em;
+}
+
+.title_en {
+    font-size: 24px;
+}
+
+
+.title_en span {
+    position: absolute;
+    top: -30px;
+    left: 40%;
+    z-index: 1;
+}
+
+.title_ja {
+    font-size: 40px;
+    font-weight: bold;
+
+}
+
+.title_box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 35px;
+}
+
+.title {
+    padding: 60px 0;
+
+}
+
+.aboutme {
+    margin-top: 90px;
+}
+
+.aboutme .text {
+    font-size: 16px;
+    line-height:  1.5em;
+}
+
+
+.profile {
+    background-color: #FFFFFF;
+    border: 1px solid #0C4B2F;
+    border-radius: 0 30% 0 0;
+    padding: 70px;
+}
+
+.profile_box {
+    display: flex;
+    gap: 5em;
+}
+
+.profile_text div {
+    padding-top: 20px;
+    padding-bottom: 15px;
+    position: relative;
+}
+
+.profile_text div::after {
+    content:'';
+    height:2px;
+    width: 693px;
+    background: #0C4B2F;
+    position: absolute;
+    top: 5px;
+    display: inline-block;
+}
+
+.profile_title {
+    font-size: 24px;
+    font-weight: bold;
+    padding-bottom: 15px;
+
+}
+
+.works {
+    background-color: #FFFFFF;
+    border: 1px solid #0C4B2F;
+    border-radius: 0 25% 0 0;
+    width: 346px;
+    height: 517px;
+    padding: 20px 0px 0px 30px;
+}
+.works .number {
+    font-size:40px;
+    font-weight: bold;
+}
+
+.works .works_title {
+    font-size: 20px;
+}
+
+.view_box{
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.works_date {
+    margin-top: 10px;
+}
+
+.works .sen3 {
+    height: 1px;
+    width: 150px;
+    background-color: #0C4B2F;
+}
+
+.graphic {
+    display: flex;
+    gap: 44px;
+}
+
+.works_box {
+    display: flex;
+    justify-content: unset;
+    gap : 100px;
+}
+
+
+
+
+
+/*====== 9-1-1 縦線が動いてスクロールを促す =======*/
+
+/*スクロールダウン全体の場所*/
+.scrolldown1{
+    /*描画位置※位置は適宜調整してください*/
+	position:absolute;
+	left:50%;
+	bottom:10px;
+    /*全体の高さ*/
+	height:50px;
+}
+
+/*Scrollテキストの描写*/
+.scrolldown1 span{
+    /*描画位置*/
+	position: absolute;
+	left:-15px;
+	top: -15px;
+    /*テキストの形状*/
+	color: #A1A1A1;
+	font-size: 0.7rem;
+	letter-spacing: 0.05em;
+}
+
+/* 線の描写 */
+.scrolldown1::after{
+	content: "";
+    /*描画位置*/
+	position: absolute;
+	top: 0;
+    /*線の形状*/
+	width: 1px;
+	height: 30px;
+	background: #A1A1A1;
+    /*線の動き1.4秒かけて動く。永遠にループ*/
+	animation: pathmove 1.4s ease-in-out infinite;
+	opacity:0;
+}
+
+/*高さ・位置・透過が変化して線が上から下に動く*/
+@keyframes pathmove{
+	0%{
+		height:0;
+		top:0;
+		opacity: 0;
+	}
+	30%{
+		height:30px;
+		opacity: 1;
+	}
+	100%{
+		height:0;
+		top:50px;
+		opacity: 0;
+	}
+}
+/*▲ここまでscroll*/
+
+/*▼流体シェイプ*/
+
+.ellipse_2 {
+    position: absolute;
+    width:40vh;/*横幅*/
+    height: 35vh;/*縦幅*/
+    background:#C3AE88;/*背景色*/
+    animation: fluidrotate 30s ease 0s infinite;/*アニメーションの設定*/
+    left: 45%;
+    top: 1600px;
+    z-index: 1;
+  }
+  
+  @keyframes fluidrotate {  
+        
+  0%, 100% {
+      border-radius: 63% 37% 54% 46%/55% 48% 52% 45%;
+  }
+  14% {
+      border-radius: 40% 60% 54% 46%/49% 60% 40% 51%;
+  }
+  28% {
+      border-radius: 54% 46% 38% 62%/49% 70% 30% 51%;
+  }
+  42% {
+      border-radius: 61% 39% 55% 45%/61% 38% 62% 39%;
+  }
+  56% {
+      border-radius: 61% 39% 67% 33%/70% 50% 50% 30%;
+  }
+  70% {
+      border-radius: 50% 50% 34% 66%/56% 68% 32% 44%;
+  }
+  84% {
+      border-radius: 46% 54% 50% 50%/35% 61% 39% 65%;
+  }
+        
+  }
+ 
     
 
 
