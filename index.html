@@ -169,6 +169,35 @@
         </section>
 
         <footer>
+            <div class="footer_box">
+                <div class="footer_nav">
+                    <nav>
+                        <ul>
+                            <li>ABOUT</li>
+                            <li>WORKS</li>
+                            <li>CONCEPT</li>
+                        </ul>
+                    </nav>
+
+                    <div class="contact_btn">
+                        CONTACT FORM →
+                    </div>
+                </div>
+
+
+                <div class="anim_1">
+                    <span class="svg_1"><img src="./img/1x/en.svg" alt=""></span>
+                    <span class="svg_2"><img src="./img/1x/kado.svg" alt=""></span>
+                    <span class="svg_4"><img src="./img/1x/en.svg" alt=""></span>
+                    <span class="svg_5"><img src="./img/1x/sen2.svg" alt=""></span>
+                    <span class="svg_6"><img src="./img/1x/kado2.svg" alt=""></span>
+                    <span class="svg_3"><img src="./img/1x/sen1.svg" alt=""></span>
+                </div>
+
+                <div class="copyright">@2024 Inayoshi Ayumi</div>
+
+            </div>
+
 
         </footer>
     </div>
@@ -188,7 +217,12 @@
             $('.line').click(function () {
                 $('.btn_nav').toggleClass('active');
                 $('.menu').toggleClass('active');
-                $('.text').text('close');
+                if ($('.menu .text').text() == 'menu') {
+                    $('.menu .text').text('close');
+                } else {
+                    $('.menu .text').text('menu');
+                }
+
             });
         });
 
