@@ -48,6 +48,7 @@ h1 {
         font-size: 20px;
 }
 
+
 .bg_green,.bg_white {
     width:127px;
     padding: 12px;
@@ -121,7 +122,8 @@ padding: 0 5px;
 .btn_nav {
     display:flex;
     background-color:#C3AE88;
-    position: fixed;
+    position: absolute;
+    z-index: 99;
     top: 0px;
     width: 100%;
     left: 0;
@@ -414,6 +416,15 @@ footer {
     color:#C3AE88;
     font-size: 14px;
 }
+
+.eachTextAnime span{opacity: 0;}
+.eachTextAnime.appeartext span{ animation:text_anime_on 1s ease-out forwards; }
+@keyframes text_anime_on {
+	0% {opacity:0;}
+	100% {opacity:1;}
+}
+
+
 
 
 
