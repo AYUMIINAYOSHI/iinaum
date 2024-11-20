@@ -9,7 +9,13 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" type="text/css" href="css/9-1-1.css">
     <link rel="stylesheet" type="text/css" href="css/8-11.css">
+    <link rel="stylesheet" href="path/splide-core.min.css" />
+    <link href="
+https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
+" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="path-to-the-file/splide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 
 </head>
 
@@ -46,12 +52,12 @@
 
         <main>
             <div class="anim_1">
-                <div class="main_box">
-                    <span class="svg_1"><img src="./img/1x/en.svg" alt=""></span>
+                <div class="main_box container">
+                    <span class="svg_1 wrapper1"><img src="./img/1x/en.svg" alt=""></span>
                     <span class="svg_2"><img src="./img/1x/kado.svg" alt=""></span>
                     <span class="svg_4"><img src="./img/1x/en.svg" alt=""></span>
                     <span class="svg_5"><img src="./img/1x/sen2.svg" alt=""></span>
-                    <span class="svg_6"><img src="./img/1x/kado2.svg" alt=""></span>
+                    <span class="svg_6 wrapper2"><img src="./img/1x/kado2.svg" alt=""></span>
                     <span class="svg_3"><img src="./img/1x/sen1.svg" alt=""></span>
                 </div>
 
@@ -62,26 +68,11 @@
         </main>
 
         <section class="articulate">
-            <p class="eachTextAnime appeartext">
-            <h2>
-                <span style="animation-delay:.0s;">デ</span>
-                <span style="animation-delay:.1s;">ザ</span>
-                <span style="animation-delay:.1.5s;">イ</span>
-                <span style="animation-delay:.2s;">ン</span>
-                <span style="animation-delay:.2.5s;">の</span>
-                <span style="animation-delay:.3s;">力</span>
-                <span style="animation-delay:.3.5s;">で</span>
-                <br>
-                <span style="animation-delay:.4s;">世</span>
-                <span style="animation-delay:.4.5s;">の</span>
-                <span style="animation-delay:.5s;">中</span>
-                <span style="animation-delay:.5.5s;">を</span>
-                <span style="animation-delay:.6s;">良</span>
-                <span style="animation-delay:.7s;">く</span>
-                <span style="animation-delay:.7.5s;">す</span>
-                <span style="animation-delay:.8s;">る</span>
+
+            <h2 class="eachTextAnime">
+                デザインの力で<br>世の中を良くする
             </h2>
-            </p>
+
 
 
             <div class="icon">
@@ -188,9 +179,68 @@
 
             </div>
 
-
-
         </section>
+
+
+        <section class="splide" aria-label="Splideの基本的なHTML">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                    
+                    <div class="works">
+                        <p class="number">01</p>
+                        <p><img src="https://placehold.jp/280x280.png" alt=""></p>
+                        <p class="works_date">2024.10.27</p>
+                        <p class="works_title">トラベルメディアTRRRIP.様</p>
+                        <div class="view_box">
+                            <span class="sen3"></span>
+                            <span>View More</span>
+                            <span>➔</span>
+                        </div>
+                    </div>
+                </li>
+                    
+                <li class="splide__slide">
+                    
+                    <div class="works">
+                        <p class="number">02</p>
+                        <p><img src="https://placehold.jp/280x280.png" alt=""></p>
+                        <p class="works_date">2024.10.27</p>
+                        <p class="works_title">トラベルメディアTRRRIP.様</p>
+                        <div class="view_box">
+                            <span class="sen3"></span>
+                            <span>View More</span>
+                            <span>➔</span>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="splide__slide">
+                    
+                    <div class="works">
+                        <p class="number">03</p>
+                        <p><img src="https://placehold.jp/280x280.png" alt=""></p>
+                        <p class="works_date">2024.10.27</p>
+                        <p class="works_title">トラベルメディアTRRRIP.様</p>
+                        <div class="view_box">
+                            <span class="sen3"></span>
+                            <span>View More</span>
+                            <span>➔</span>
+                        </div>
+                    </div>
+                </li>
+              </ul>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
 
         <footer>
             <div class="footer_box">
@@ -255,7 +305,18 @@
     </script>
 
 
-
+    <script>
+      const mySplide = new Splide( '.splide', {
+  type       : 'loop',
+  perPage    : 2,
+  breakpoints: {
+    640: {
+      height: '6rem',
+    },
+  },
+} );
+mySplide.mount();
+    </script>
 
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -290,12 +351,16 @@ $(window).on('load', function () {
 		var textbox = "";
 		text.split('').forEach(function (t, i) {
 			if (t !== " ") {
-				if (i < 10) {
-					textbox += '' + t + '';
-				} else {
-					var n = i / 10;
-					textbox += '' + t + '';
-				}
+                if (i < 10) {
+
+                    textbox += '<span style="animation-delay: .' + i + 's;">' + t + '</span>';
+
+                } else {
+                    var n = i / 10;
+
+                    textbox += '<span style="animation-delay: ' + n + 's;">' + t + '</span>';
+
+                }
 
 			} else {
 				textbox += t;
@@ -307,6 +372,9 @@ $(window).on('load', function () {
 	EachTextAnimeControl();/* アニメーション用の関数を呼ぶ*/
 });// ここまで画面が読み込まれたらすぐに動かしたい場合の記述
     </script>
+
+
+
 </body>
 
 
