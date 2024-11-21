@@ -130,12 +130,12 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
         </section>
 
         <section class="articulate_en">
-            <h2>Making the world <br>
+            <h2 class="eachTextAnime">Making the world <br>
                 a better place <br>
                 through design.</h2>
         </section>
 
-
+<!--
         <section class="works_box">
             <div class="nav_works">
                 <div class="title">
@@ -180,9 +180,40 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
             </div>
 
         </section>
+-->
 
 
-        <section class="splide" aria-label="Splideの基本的なHTML">
+
+
+
+   <section class="works_box">       
+        <div class="nav_works">
+            <div class="title">
+                <p class="title_en">.Works</p>
+                <div class="">
+                    <p class="title_ja">制作実績</p>
+                    <p class="text">これまで制作したバナー、LP、WEB制作の一部をご紹介します。</p>
+                </div>
+            </div>
+
+            <div class="bg_green2">View More ➔</div>
+
+            <div class="slide_btn">
+              <button type="button" aria-label="Go to last slide" aria-controls="splide01-track">◀︎</button>
+              <div class="tatesen"></div>
+              <div>01</div>
+              <div>|</div>
+              <div>02</div>
+              <div class="tatesen"></div>
+              <div>▶︎</div>
+            </div>
+
+
+            <div class="pages"></div>
+        </div>
+
+
+        <div class="splide" aria-label="Splideの基本的なHTML">
             <div class="splide__track">
               <ul class="splide__list">
                 <li class="splide__slide">
@@ -231,8 +262,8 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                 </li>
               </ul>
             </div>
-        </section>
-
+        </div>
+    </section>
 
 
 
@@ -308,6 +339,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
     <script>
       const mySplide = new Splide( '.splide', {
   type       : 'loop',
+  width : '800px',
   perPage    : 2,
   breakpoints: {
     640: {
@@ -359,9 +391,12 @@ $(window).on('load', function () {
                     var n = i / 10;
 
                     textbox += '<span style="animation-delay: ' + n + 's;">' + t + '</span>';
-
+if(i == 23){
+    textbox += '<br>'
+}
                 }
-
+                console.log(t)
+                console.log(i)
 			} else {
 				textbox += t;
 			}
