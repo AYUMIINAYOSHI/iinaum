@@ -553,17 +553,32 @@ footer {
   }
 
   /** ▼要素をふわふわ*/
- .container {
+  .container {
 	position: relative;
-	width: 100%;
-	
+	/* width: 100%; */
+
+    /* 平垣内調整部分 */
+	height: 100%; /* 高さを広げる */
+    /* ボールを跳ね返させる範囲を画面幅いっぱいに */
+    width: 100vw;
+    margin-left: calc((100% - 100vw) / 2);
 }
 
 .wrapper1 {
 	position: absolute;
-	animation: diagonal-move-anim 3s linear infinite alternate;
+	/* animation: diagonal-move-anim 3s linear infinite alternate; */
     
 }
+
+.wrapper3 {
+	position: absolute;
+	/* animation: diagonal-move-anim 3s linear infinite alternate; */
+    
+}
+
+
+
+
 
 .wrapper2 {
 	position: absolute;
@@ -572,6 +587,12 @@ footer {
 }
 
 
+.wrapper3 {
+	position: absolute;
+	animation: diagonal-move-anim3 4s linear infinite alternate;
+    
+}
+
 @keyframes diagonal-move-anim {
 
 	0% {
@@ -579,7 +600,7 @@ footer {
 	}
 
     50% {
-		transform: translate(150px, 150px);
+		transform: translate(-120px, 150px);
         
 	}
 
@@ -587,8 +608,6 @@ footer {
 		transform: translate(0px, 300px);
 	}
 
-
-    
 
 }
 
@@ -607,6 +626,24 @@ footer {
 		transform: translate(0px, -300px);
 	}
 }
+
+
+@keyframes diagonal-move-anim3 {
+
+	0% {
+		transform: translate(0, 0);
+	}
+
+    50% {
+		transform: translate(150px, 150px);
+        
+	}
+
+	100% {
+		transform: translate(0px, 300px);
+	}
+}
+
 
   /*要素をふわふわ
  
