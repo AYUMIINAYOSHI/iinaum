@@ -249,8 +249,24 @@ padding: 0 5px;
     height: 300px;
     border-radius: 48% 52% 20% 80% / 40% 72% 28% 60%;
     margin: 0 auto;
-    z-index: 2;
+    z-index: 3;
     position: relative;
+    transition-property: opacity;
+    transition-duration: 0.5s;
+}
+
+.ellipse_1:hover {
+    opacity: 0.5;
+}
+
+.ellipse_3 {
+    width: 299px;
+    height: 299px;
+    margin: 0 auto;
+    z-index: 2;
+    position: absolute;
+    top: 17.5%;
+    left:34%;
 }
 
 
@@ -317,7 +333,10 @@ padding: 0 5px;
     border: 1px solid #0C4B2F;
     border-radius: 0 30% 0 0;
     padding: 70px;
+
 }
+
+
 
 .profile_box {
     display: flex;
@@ -338,6 +357,7 @@ padding: 0 5px;
     position: absolute;
     top: 5px;
     display: inline-block;
+    animation: border_anim 1s linear forwards;
 }
 
 .profile_text div:first-child::after {
@@ -353,13 +373,24 @@ padding: 0 5px;
 
 }
 
+
+@keyframes border_anim {
+	0%{
+		width: 0%;
+	}
+	100%{
+		width: 100%;
+	}
+}
+
 .works {
     background-color: #FFFFFF;
     border: 1px solid #0C4B2F;
     border-radius: 0 15% 0 0;
-    width: 346px;
+    /*width: 346px; */
     height: 517px;
     padding: 20px 0px 0px 30px;
+    box-sizing: border-box;
 }
 .works .number {
     font-size:40px;
@@ -392,11 +423,34 @@ padding: 0 5px;
     gap: 44px;
 }
 
-.works_box {
+.works_box .splide {
     display: flex;
     justify-content: unset;
     gap : 100px;
 }
+
+.splide__arrow {
+    background: transparent;
+    position: initial;
+    transform: translateY(0);
+}
+
+.splide_wrapper {
+    width: calc(100% + (100vw - 100% - 685px) / 2);
+}
+
+.splide__slide {
+    width: 346px;
+}
+
+
+.pagination {
+    z-index: 99;
+}
+ 
+
+
+
 
 footer {
     background-color:#0C4B2F;
