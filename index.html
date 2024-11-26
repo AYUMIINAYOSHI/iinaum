@@ -168,10 +168,9 @@
           </div>
 
         <div class="splide_wrapper">
-            <div class="splide__track">
+          <div class="splide__track">
             <ul class="splide__list">
-                <li class="splide__slide">
-                    
+                <li class="splide__slide js-open button-open" data-id="1">
                     <div class="works">
                         <p class="number">01</p>
                         <p><img src="https://placehold.jp/280x280.png" alt=""></p>
@@ -185,9 +184,8 @@
                     </div>
                 </li>
                     
-                <li class="splide__slide">
-                    
-                    <div class="works">
+                <li class="splide__slide js-open button-open" data-id="2" > 
+                      <div class="works">
                         <p class="number">02</p>
                         <p><img src="https://placehold.jp/280x280.png" alt=""></p>
                         <p class="works_date">2024.10.27</p>
@@ -197,11 +195,10 @@
                             <span>View More</span>
                             <span>➔</span>
                         </div>
-                    </div>
+                      </div>
                 </li>
 
-                <li class="splide__slide">
-                    
+                <li class="splide__slide js-open button-open" data-id="3">  
                     <div class="works">
                         <p class="number">03</p>
                         <p><img src="https://placehold.jp/280x280.png" alt=""></p>
@@ -221,9 +218,34 @@
 </section>
 
 
+<!-- オーバーレイ -->
+<div id="overlay" class="overlay"></div>
+<!-- モーダルウィンドウ1 -->
+  <div class="modal-window" data-id="modal1">
+    <p><img src="https://placehold.jp/500x500.png" alt="">
+    </p>
+    <div class="modal-window_textbox">
+    <p class="modal-window_title">モーダルNo.1タイトル</p>
+    <p class="modal-window_text">モーダルNo.1</p>
+    </div>
 
-
-
+    <button class="js-close button-close"><span></span>Close</button>
+  </div>
+ <!-- モーダルウィンドウ2 -->
+  <div class="modal-window" data-id="modal2">
+    <p>モーダルNo.2</p>
+    <button class="js-close button-close">Close</button>
+  </div>
+<!-- モーダルウィンドウ3 -->
+  <div class="modal-window" data-id="modal3">
+    <p>モーダルNo.3</p>
+    <button class="js-close button-close">Close</button>
+  </div>
+<!-- モーダルウィンドウ4-->
+  <div class="modal-window" data-id="modal4">
+    <p>モーダルNo.4</p>
+    <button class="js-close button-close">Close</button>
+  </div>
 
 
 
@@ -419,7 +441,19 @@ if(i == 15){
     animateBall()
 
 */
-
+//▼以下モータルウィンドウ
+$(function () {
+  $('.js-open').click(function () {
+    $("body").addClass("no_scroll"); // 背景固定させるクラス付与
+    var id = $(this).data('id'); // 何番目のキャプション（モーダルウィンドウ）か認識
+    $('#overlay, .modal-window[data-id="modal' + id + '"]').fadeIn();
+  });
+  // オーバーレイクリックでもモーダルを閉じるように
+  $('.js-close , #overlay').click(function () {
+    $("body").removeClass("no_scroll"); // 背景固定させるクラス削除
+    $('#overlay, .modal-window').fadeOut();
+  });
+});
 
 
 
