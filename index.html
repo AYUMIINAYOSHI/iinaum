@@ -52,11 +52,11 @@
             <div class="anim_1">
                 <div class="main_box container">
                     <span class="svg_1 wrapper1"><img src="./img/1x/en.svg" alt=""></span>
-                    <span class="svg_2"><img src="./img/1x/kado.svg" alt=""></span>
-                    <span class="svg_4 wrapper3"><img src="./img/1x/en.svg" alt=""></span>
-                    <span class="svg_5"><img src="./img/1x/sen2.svg" alt=""></span>
+                    <span class="svg_2 wrapper4"><img src="./img/1x/kado.svg" alt=""></span>
+                    <span class="svg_4 wrapper6"><img src="./img/1x/en.svg" alt=""></span>
+                    <span class="svg_5 wrapper3"><img src="./img/1x/sen2.svg" alt=""></span>
                     <span class="svg_6 wrapper2"><img src="./img/1x/kado2.svg" alt=""></span>
-                    <span class="svg_3"><img src="./img/1x/sen1.svg" alt=""></span>
+                    <span class="svg_3 wrapper5"><img src="./img/1x/sen1.svg" alt=""></span>
                 </div>
 
 
@@ -92,7 +92,7 @@
                 </div>
             </div>
 
-            <div class="profile">
+            <div class="profile profile_border">
                 <div>
                     <div class="profile_box">
                         <img src="https://placehold.jp/170x170.png" alt="">
@@ -130,61 +130,14 @@
         </section>
 
         <section class="articulate_en">
-            <h2 class="eachTextAnime">Making the world<br> a better place<br>through design.</h2>
+            <h2 class="eachTextAnime">Making the world a better place through design.</h2>
         </section>
-
-<!--
-        <section class="works_box">
-            <div class="nav_works">
-                <div class="title">
-                    <p class="title_en">.Works</p>
-                    <div class="">
-                        <p class="title_ja">制作実績</p>
-                        <p class="text">これまで制作したバナー、LP、WEB制作の一部をご紹介します。</p>
-                    </div>
-                </div>
-
-                <div class="bg_green2">View More ➔</div>
-
-                <div class="pages"></div>
-            </div>
-
-
-            <div class="graphic">
-                <div class="works">
-                    <p class="number">01</p>
-                    <p><img src="https://placehold.jp/280x280.png" alt=""></p>
-                    <p class="works_date">2024.10.27</p>
-                    <p class="works_title">トラベルメディアTRRRIP.様</p>
-                    <div class="view_box">
-                        <span class="sen3"></span>
-                        <span>View More</span>
-                        <span>➔</span>
-                    </div>
-                </div>
-
-                <div class="works">
-                    <p class="number">02</p>
-                    <p><img src="https://placehold.jp/280x280.png" alt=""></p>
-                    <p class="works_date">2024.10.27</p>
-                    <p class="works_title">トラベルメディアTRRRIP.様</p>
-                    <div class="view_box">
-                        <span class="sen3"></span>
-                        <span>View More</span>
-                        <span>➔</span>
-                    </div>
-                </div>
-
-            </div>
-
-        </section>
--->
 
 
 
    
-<section class="works_box">       
-    <div class="splide" aria-label="Splideの基本的なHTML">
+     <section class="works_box">       
+      <div class="splide" aria-label="Splideの基本的なHTML">
         <div class="nav_works">
             <div class="title">
                 <p class="title_en">.Works</p>
@@ -212,7 +165,7 @@
 
 
             <div class="pages"></div>
-        </div>
+          </div>
 
         <div class="splide_wrapper">
             <div class="splide__track">
@@ -293,13 +246,13 @@
                 </div>
 
 
-                <div class="anim_1">
-                    <span class="svg_1"><img src="./img/1x/en.svg" alt=""></span>
-                    <span class="svg_2"><img src="./img/1x/kado.svg" alt=""></span>
-                    <span class="svg_4"><img src="./img/1x/en.svg" alt=""></span>
-                    <span class="svg_5"><img src="./img/1x/sen2.svg" alt=""></span>
-                    <span class="svg_6"><img src="./img/1x/kado2.svg" alt=""></span>
-                    <span class="svg_3"><img src="./img/1x/sen1.svg" alt=""></span>
+                <div class="anim_2">
+                    <span class="svg_1 wrapper1"><img src="./img/1x/en.svg" alt=""></span>
+                    <span class="svg_2 wrapper4"><img src="./img/1x/kado.svg" alt=""></span>
+                    <span class="svg_4 wrapper6"><img src="./img/1x/en.svg" alt=""></span>
+                    <span class="svg_5 wrapper3"><img src="./img/1x/sen2.svg" alt=""></span>
+                    <span class="svg_6 wrapper2"><img src="./img/1x/kado2.svg" alt=""></span>
+                    <span class="svg_3 wrapper5"><img src="./img/1x/sen1.svg" alt=""></span>
                 </div>
 
                 <div class="copyright">@2024 Inayoshi Ayumi</div>
@@ -330,7 +283,6 @@
                 } else {
                     $('.menu .text').text('menu');
                 }
-
             });
         });
 
@@ -353,6 +305,21 @@
         },
     });
     mySplide.mount();
+
+    //以下 splideの表示枚数 //
+
+   // 次のスライドが表示されるタイミングで発生
+   mySplide.on("active", function () {
+  slideIndex();
+   });
+   function slideIndex() {
+  // 現在のスライドが何枚目かを取得
+  document.getElementById("slide-current").textContent = mySplide.index + 1;
+  // スライドの総数を取得
+  document.getElementById("slide-length").textContent = mySplide.length;
+   }
+   slideIndex();
+
  </script>
 
 
@@ -399,6 +366,13 @@ $(window).on('load', function () {
 if(i == 23){
     textbox += '<br>'
 }
+
+if(i == 15){
+    textbox += '<br>'
+}
+
+
+
                 }
                 console.log(t)
                 console.log(i)
@@ -449,17 +423,6 @@ if(i == 23){
 
 
 
-// 次のスライドが表示されるタイミングで発生
-splide.on("active", function () {
-  slideIndex();
-});
-function slideIndex() {
-  // 現在のスライドが何枚目かを取得
-  document.getElementById("slide-current").textContent = splide.index + 1;
-  // スライドの総数を取得
-  document.getElementById("slide-length").textContent = splide.length;
-}
-slideIndex();
 
 </script>
 
