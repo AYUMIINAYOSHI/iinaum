@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+.concept main div.title_en {
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 85px;
+}
+
+.concept section {
+    text-align: center;
+}
+
+.concept section div.text_box {
+    text-align: center;
+    width: 600px;
+    display: inline-block;
+}
+
+.concept section h2.title_ja {
+    font-weight: bold;
+    font-size: 56px;
+    text-align: left;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.concept section div.text_box p.text {
+    text-align: left;
+    line-height: 2em;
+
+}
+
+
+
+
