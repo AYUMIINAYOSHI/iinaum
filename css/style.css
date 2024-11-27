@@ -255,6 +255,175 @@ padding: 0 5px;
 }
 
 
+.circle{
+    /*円の見た目を設定*/
+    width: 100px;
+    height: 100px;
+    transform: scale(1);
+    background-color: #0C4B2F;
+    border-radius: 50%;
+    /*円の位置を画面中央に固定*/
+    position: fixed;
+    left: calc(50% - 50px);
+    top: calc(50% - 50px);
+}
+
+
+
+
+
+
+
+
+.illustration_1 {
+    position:relative;
+    width:870px;
+    height: 320px;
+    margin: 0 auto;
+}
+
+.ue_ushiro {
+    animation: 2s ue_ushiro linear;
+    animation-timeline: scroll();
+}
+
+@keyframes ue_ushiro {
+    from {
+      transform: translateY(10px);
+    }
+    to {
+      transform: translateY(0px);
+    }
+  }
+
+.ue_mae {
+    position:absolute;
+    top: -20px;
+    right: 0;
+    animation: parallax-large-anim linear;
+    animation-timeline: scroll();
+}
+
+@keyframes parallax-large-anim {
+    from {
+      transform: translateY(700px);
+    }
+    to {
+      transform: translateY(0px);
+    }
+  }
+
+
+
+
+.illustration_2 {
+    position: relative;
+    width:800px;
+    height: 350px;
+    margin: 0 auto;
+}
+
+.mannaka_ushiro {
+    position:absolute;
+    top: 10%;
+    right: 17%;
+    width: 80%;
+    animation: 5s mannaka_ushiro linear;
+    animation-timeline: scroll();
+}
+
+@keyframes mannaka_ushiro  {
+    from {
+      transform: translateY(300px);
+    }
+    to {
+      transform: translateY(0px);
+    }
+  }
+
+
+
+@keyframes mannaka_mae  {
+    from {
+      transform: translateY(700px);
+    }
+    to {
+      transform: translateY(0px);
+    }
+  }
+
+
+
+
+.mannaka_mae {
+    position: absolute;
+    top: 11%;
+    right: 11%;
+    width: 80%;
+    animation: 2s mannaka_mae linear;
+    animation-timeline: scroll();
+}
+
+.illustration_3 {
+    position:relative;
+    width: 870;
+    height:641px;
+    margin: 0 auto;
+}
+
+.tree {
+    position: absolute;
+    top:20%;
+    left:40%;
+    z-index: 2;
+    width: 30%;
+
+}
+
+.shitamae {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    z-index: 3;
+    width: 60%;
+    animation: 3s shitamae linear;
+    animation-timeline: scroll();
+}
+
+@keyframes shitamae {
+    from {
+      transform: translateY(100px);
+    }
+    to {
+      transform: translateY(0px);
+    }
+  }
+
+.shitaushiro {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    z-index: 1;
+    width: 60%;
+    animation: parallax-small-anim linear;
+    animation-timeline: scroll();
+}
+
+@keyframes parallax-small-anim {
+    from {
+      transform: translateY(-700px);
+    }
+    to {
+      transform: translateY(0px);
+    }
+  }
+
+
+
+
+
+
+
 .anim_2 {
     height: 601px;
 }
@@ -393,17 +562,56 @@ padding: 0 5px;
     line-height:  1.5em;
 }
 
+@keyframes rotate {
+    100% {
+      transform: rotate(1turn);
+    }
+}
 
 .profile {
     background-color: #FFFFFF;
-    padding: 70px;
+    position: relative;
+    z-index: 0;
+    border-radius: 0 30% 0 0;
+    overflow: hidden;
+    padding: 2rem;
+}
+
+.profile::before {
+    content: '';
+    position: absolute;
+    z-index: -2;
+    left: -50%;
+    top: -50%;
+    width: 200%;
+    height: 200%;
+    background-color: #0c4b2f;
+    background-repeat: no-repeat;
+    background-size: 50% 50%, 50% 50%;
+    background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+    background-image: 
+      linear-gradient(#0c4b2f, #0c4b2f),
+      linear-gradient(white, white);
+    animation: rotate 4s linear infinite;
+}
+  
+.profile::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 1px;
+    top: 1px;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    background: white;
     border-radius: 0 30% 0 0;
 }
 
-.profile_border {
+/* .profile_border {
     border: 1px solid #0C4B2F;
     animation: border_anim 1s linear forwards;
-}
+} */
+
 
 
 
@@ -426,11 +634,15 @@ padding: 0 5px;
     position: absolute;
     top: 5px;
     display: inline-block;
-    animation: border_anim 1s linear forwards;
+    width: 0%;
 }
 
 .profile_text div:first-child::after {
  background: transparent;
+}
+
+.profile_text .inviewText.active::after {
+    animation: border_anim 1s linear forwards;
 }
 
 
@@ -503,9 +715,7 @@ padding: 0 5px;
     height: 500px;
     background-color: #dfdddd;
     z-index: 999;
-    padding: 4rem 2rem;
     overflow: scroll;
-    text-align: center;
   }
 
   .modal-window_title {
@@ -519,12 +729,17 @@ padding: 0 5px;
     text-align:left;
   }
 
+  .modal-window > div {
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+
 
   /* 閉じるボタン */
   .button-close {
-    position: fixed;
+    position: sticky;
     top: 2.5%;
-    right: 2%;
+    left: 80%;
     padding: 0.5em;
     background-color: transparent;
     color: #0C4B2F;

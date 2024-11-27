@@ -59,11 +59,37 @@
                     <span class="svg_3 wrapper5"><img src="./img/1x/sen1.svg" alt=""></span>
                 </div>
 
+                <div class="scroll_box">
+                 <div class="circle">
+
+                 </div>
+                </div>
+
 
 
                 <div class="scrolldown1"><span>Scroll</span></div>
             </div>
         </main>
+
+        <section class="illustration">
+            <div class="illustration_1">
+              <img src="./img/SVG/ue_ushiro.svg" alt="" class="ue_ushiro">
+              <img src="./img/SVG/ue_mae.svg" alt="" class="ue_mae">
+            </div>
+   
+            <div class="illustration_2">
+              <img src="./img/SVG/mannaka_ushiro.svg" alt="" class="mannaka_ushiro">
+              <img src="./img/SVG/mannaka_mae.svg" alt="" class="mannaka_mae">
+            </div>
+            
+            <div class="illustration_3">
+              <img src="./img/SVG/shitaushiro.svg" alt="" class="shitaushiro">  
+              <img src="./img/SVG/tree.svg" alt="" class="tree">  
+              <img src="./img/SVG/shitamae.svg" alt="" class="shitamae">
+            </div>
+        
+
+        </section>
 
         <section class="articulate">
 
@@ -105,18 +131,18 @@
                 </div>
 
                 <div class="profile_text">
-                    <div>
+                    <div class="inviewText">    
                         <p>1992年小さな田舎町に生まれる。目の前が田んぼ一面で山と川が広がる環境で育ち、幼少期はいつも自然に触れて遊んでいた。絵を描く事が大好きだった幼少期は、母親が迎えにきても納得いくまで色を塗り続けていた。
                             大人になり自然の環境から離れた今も、植物好きでアロマテラピー検定の取得や植物療法の勉強を行い、ハンドメイドでキャンドルの制作＆販売を行っています。</p>
                     </div>
 
-                    <div>
+                    <div class="inviewText"> 
                         <p class="profile_title">WORK</p>
                         <p>自社工場で製造から販売、マーケティングからWEBデザイン制作、出荷までを一貫して行い自社ブランドを持つEC会社に2016年に入社。受注業務、ECサイトの運営管理、経理を経て、マーケティング、SEOコンテンツ作成、WEBデザイン制作を行っています。現在はインハウスデザイナーとしてパッケージデザインやフライヤー等の印刷物の作成、広告バナーやLPのWEB制作を担当。
                         </p>
                     </div>
 
-                    <div>
+                    <div class="inviewText"> 
                         <p class="profile_title">SKILL</p>
                         <p>illustrator ★★★<br>photoshop ★★★★★<br>coding ★★<br>
                             イラストレーター ではバナー、SNSやWeb投稿用コンテンツから名刺、チラシ、商品パッケージ等のDTP制作まで幅広く対応。photoshop
@@ -221,31 +247,53 @@
 <!-- オーバーレイ -->
 <div id="overlay" class="overlay"></div>
 <!-- モーダルウィンドウ1 -->
-  <div class="modal-window" data-id="modal1">
+<div class="modal-window" data-id="modal1">
+  <button class="js-close button-close"><span></span>Close</button>
+  <div>
     <p><img src="https://placehold.jp/500x500.png" alt="">
     </p>
     <div class="modal-window_textbox">
     <p class="modal-window_title">モーダルNo.1タイトル</p>
     <p class="modal-window_text">モーダルNo.1</p>
-    </div>
-
-    <button class="js-close button-close"><span></span>Close</button>
+    </div>  
   </div>
+</div> 
  <!-- モーダルウィンドウ2 -->
-  <div class="modal-window" data-id="modal2">
-    <p>モーダルNo.2</p>
-    <button class="js-close button-close">Close</button>
-  </div>
+ <div class="modal-window" data-id="modal2">
+    <button class="js-close button-close"><span></span>Close</button>
+    <div>
+      <p><img src="https://placehold.jp/500x500.png" alt="">
+      </p>
+      <div class="modal-window_textbox">
+      <p class="modal-window_title">モーダルNo.2タイトル</p>
+      <p class="modal-window_text">モーダルNo.2</p>
+      </div>  
+    </div>
+  </div> 
 <!-- モーダルウィンドウ3 -->
-  <div class="modal-window" data-id="modal3">
-    <p>モーダルNo.3</p>
-    <button class="js-close button-close">Close</button>
-  </div>
+<div class="modal-window" data-id="modal3">
+    <button class="js-close button-close"><span></span>Close</button>
+    <div>
+      <p><img src="https://placehold.jp/500x500.png" alt="">
+      </p>
+      <div class="modal-window_textbox">
+      <p class="modal-window_title">モーダルNo.3タイトル</p>
+      <p class="modal-window_text">モーダルNo.3</p>
+      </div>  
+    </div>
+  </div> 
 <!-- モーダルウィンドウ4-->
-  <div class="modal-window" data-id="modal4">
-    <p>モーダルNo.4</p>
-    <button class="js-close button-close">Close</button>
-  </div>
+<div class="modal-window" data-id="modal4">
+    <button class="js-close button-close"><span></span>Close</button>
+    <div>
+      <p><img src="https://placehold.jp/500x500.png" alt="">
+      </p>
+      <div class="modal-window_textbox">
+      <p class="modal-window_title">モーダルNo.4タイトル</p>
+      <p class="modal-window_text">モーダルNo.4</p>
+      </div>  
+    </div>
+  </div> 
 
 
 
@@ -289,6 +337,18 @@
 
     <script>
         $(function () {
+            // スクロールして表示領域に入ったらclass付与
+            $(window).on('scroll', function () {
+                const scrollY = $(this).scrollTop()
+                $('.inviewText').each(function(index, text) {
+                    let textY = $(text).offset().top
+                    const windowHeight = $(window).innerHeight()
+                    if (scrollY + windowHeight > textY) {
+                        $(text).addClass('active')
+                    }
+                })
+            })
+
             $('.line').on('click', function () {
                 $('.line').toggleClass('open');
 
@@ -454,6 +514,29 @@ $(function () {
     $('#overlay, .modal-window').fadeOut();
   });
 });
+
+//▼以下main 円形のスクロール
+$(function () {
+    /* スクロール量　代入用 */
+    var scroll;
+    /* 円の大きさ+スクロール量　代入用 */
+    var sum;
+    $(window).scroll(function () {
+        /* スクロール量を取得 */
+        scroll = $(this).scrollTop();
+        /* コンソールログで確認  */
+        console.log(scroll);
+        /* 円の大きさ+スクロール量 / 50（調整）*/
+        sum = 1 + scroll / 50;
+        console.log(sum);
+        /* 円の大きさにスクロール量を足す */
+        $(".circle").css({
+            "transform": "scale(" + sum + ")"
+        })
+    })
+})
+
+
 
 
 
