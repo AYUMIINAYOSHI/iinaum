@@ -145,12 +145,14 @@ padding: 0 5px;
     transform:rotate(45deg);
     top: 50%;
     padding-right: 0.5;
+    transition: all .5s;
 
 }
 
 .line.open span::after {
     transform:rotate(-90deg);
     top: 0;
+    transition: all .5s;
 
 }
 
@@ -169,8 +171,18 @@ padding: 0 5px;
     justify-content: center;
     height: 768px;
     gap: 3em;
-    
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .3s linear;
 }
+
+.btn_nav.is-active {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+
+
 
 .btn_nav ul {
     text-align: left;
