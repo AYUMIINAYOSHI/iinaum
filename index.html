@@ -100,8 +100,10 @@
 
 
             <div class="icon">
-                <div class="ellipse_1"></div>
-                <div class="ellipse_3"><img src="./img/1x/image3.png" alt=""></div>
+                <div class="ellipse_1">
+                    <div class="ellipse_3"><img src="./img/1x/image3.png" alt=""></div>
+                </div>
+                
                 <div class="ellipse_2"></div>
                 <div class="title_en white"> <span>.concept</span></div>
             </div>
@@ -191,7 +193,7 @@
 
 
             <div class="pages"></div>
-          </div>
+        </div>
 
         <div class="splide_wrapper">
           <div class="splide__track">
@@ -203,7 +205,7 @@
                         <p class="works_date">2024.10.27</p>
                         <p class="works_title">トラベルメディアTRRRIP.様</p>
                         <div class="view_box">
-                            <span class="sen3"></span>
+                            <span class="sen3"><span></span></span>
                             <span>View More</span>
                             <span>➔</span>
                         </div>
@@ -217,7 +219,7 @@
                         <p class="works_date">2024.10.27</p>
                         <p class="works_title">トラベルメディアTRRRIP.様</p>
                         <div class="view_box">
-                            <span class="sen3"></span>
+                            <span class="sen3"><span></span></span>
                             <span>View More</span>
                             <span>➔</span>
                         </div>
@@ -231,7 +233,7 @@
                         <p class="works_date">2024.10.27</p>
                         <p class="works_title">トラベルメディアTRRRIP.様</p>
                         <div class="view_box">
-                            <span class="sen3"></span>
+                            <span class="sen3"><span></span></span>
                             <span>View More</span>
                             <span>➔</span>
                         </div>
@@ -334,7 +336,7 @@
     </div>
 
 
-
+<script src="./script.js"></script>
     <script>
         $(function () {
             // スクロールして表示領域に入ったらclass付与
@@ -535,12 +537,32 @@ $(function () {
         /* 円の大きさ+スクロール量 / 50（調整）*/
         sum = 1 + scroll / 50;
         console.log(sum);
+        // 円の最大スケールを14に設定
+        var maxScale = 14
         /* 円の大きさにスクロール量を足す */
-        $(".circle").css({
-            "transform": "scale(" + sum + ")"
-        })
+        if (sum < maxScale) {
+            $(".circle").css({
+                "transform": "scale(" + sum + ")"
+            })
+        } else {
+            // 最大まで大きくなった後、円を小さく
+            var scale = maxScale - (scroll - (50 * (maxScale  - 1))) / 50;
+            /* 最小サイズを1に制限 */
+            scale = Math.max(1, scale);
+            $(".circle").css({
+                "transform": "scale(" + scale + ")"
+            })
+
+            // 最小サイズになったら円をフェードアウト
+            if (scale == 1) {
+                $(".circle").fadeOut()
+            } else {
+                $(".circle").fadeIn()
+            }
+        }
     })
 })
+
 
 
 
