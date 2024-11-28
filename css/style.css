@@ -128,6 +128,7 @@ padding: 0 5px;
     display: block;
     position: relative;
     top: 10px;
+    transition: all .5s;
 }
 
 
@@ -139,21 +140,18 @@ padding: 0 5px;
     display: block;
     position: absolute;
     top: 5px;
+    transition: all .5s;
 }
 
 .line.open span {
     transform:rotate(45deg);
     top: 50%;
     padding-right: 0.5;
-    transition: all .5s;
-
 }
 
 .line.open span::after {
     transform:rotate(-90deg);
     top: 0;
-    transition: all .5s;
-
 }
 
 .btn_nav {
@@ -164,7 +162,6 @@ padding: 0 5px;
     top: 0px;
     width: 100%;
     left: 0;
-    transform: translateX(100%);
     color:#0C4B2F;
     font-size: 24px;
     align-items: center;
@@ -184,6 +181,7 @@ padding: 0 5px;
 
 
 
+
 .btn_nav ul {
     text-align: left;
 }
@@ -199,9 +197,11 @@ padding: 0 5px;
 
 }
 
+/*
 .btn_nav.active{
     transform: translateX(0); 
   }
+    */
 
 .nav {
     position: relative;
@@ -281,10 +281,9 @@ padding: 0 5px;
 }
 
 
-
-
-
-
+.illustration {
+    margin-top: 120vh;
+}
 
 
 .illustration_1 {
@@ -498,11 +497,10 @@ padding: 0 5px;
     margin: 0 auto;
     z-index: 3;
     position: relative;
-    transition-property: opacity;
-    transition-duration: 0.5s;
+
 }
 
-.ellipse_1:hover {
+.ellipse_1:hover .ellipse_3{ 
     opacity: 0.5;
 }
 
@@ -512,8 +510,11 @@ padding: 0 5px;
     margin: 0 auto;
     z-index: 2;
     position: absolute;
-    top: 17.5%;
-    left:34%;
+    top: 0;
+    left:0;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.5s;
 }
 
 
@@ -680,7 +681,7 @@ padding: 0 5px;
     background-color: #FFFFFF;
     border: 1px solid #0C4B2F;
     border-radius: 0 15% 0 0;
-    /*width: 346px; */
+    width: 346px;
     height: 517px;
     padding: 20px 0px 0px 30px;
     box-sizing: border-box;
@@ -705,14 +706,27 @@ padding: 0 5px;
     margin-top: 10px;
 }
 
-
 .works .sen3 {
+    width: 150px;
+}
+.works .sen3 span {
     height: 1px;
     width: 150px;
     background-color: #0C4B2F;
     display: inline-block;
 }
+.works:hover .sen3 span {
+    animation: sen3 0.5s;
+}
+@keyframes sen3 {
+    0%{
+        width:0px;
+    }
 
+    100%{
+        width:150px;
+    }
+}
 
 /* ▼以下モータルウィンドウ
 
@@ -772,7 +786,7 @@ padding: 0 5px;
     */
     width: 100%;
     height: 100%;
-    z-index: 98;
+    z-index: 999;
   }
 
 /* 表示領域外へはスクロールさせない */
@@ -1017,6 +1031,7 @@ footer {
 	position: absolute;
 	animation: diagonal-move-anim4 7s linear infinite alternate;
     
+    
 }
 
 .wrapper5 {
@@ -1060,7 +1075,7 @@ footer {
 @keyframes diagonal-move-anim2 {
 
 	0% {
-		transform: translate(0, 0);
+		transform: translate(0, 0) rotate(0deg);
 	}
 
     50% {
@@ -1069,7 +1084,7 @@ footer {
 	}
 
 	100% {
-		transform: translate(0px, -150px);
+		transform: translate(0px, -150px) rotate(180deg);
 	}
 }
 
@@ -1077,39 +1092,39 @@ footer {
 @keyframes diagonal-move-anim3 {
 
 	0% {
-		transform: translate(0, 0);
+		transform: translate(0, 0) rotate(0deg);
 	}
 
     50% {
-		transform: translate(150px, 150px);
+		transform: translate(150px, 150px) rotate(-50deg);
         
 	}
 
 	100% {
-		transform: translate(0px, 300px);
+		transform: translate(0px, 300px) rotate(-90deg);
 	}
 }
 
 @keyframes diagonal-move-anim4 {
 
 	0% {
-		transform: translate(0, 0);
+		transform: translate(0, 0) rotate(10deg);
 	}
 
     50% {
-		transform: translate(150px, 150px);
+		transform: translate(150px, 150px) rotate(90deg);
         
 	}
 
 	100% {
-		transform: translate(600px, -150px);
+		transform: translate(600px, -150px) rotate(180deg);
 	}
 }
 
 @keyframes diagonal-move-anim5 {
 
 	0% {
-		transform: translate(0, 0);
+		transform: translate(0, 0) rotate(0deg);
 	}
 
     50% {
@@ -1118,7 +1133,7 @@ footer {
 	}
 
 	100% {
-		transform: translate(-200px, 100px);
+		transform: translate(-200px, 100px) rotate(90deg);
 	}
 }
 

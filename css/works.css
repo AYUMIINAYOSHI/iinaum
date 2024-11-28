@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+div.workpage main div.works_text {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+div.workpage main div.works_text p.title_en {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+div.workpage main div.works_text h2 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+div.workpage section ul {
+    display: flex;
+    gap: 66px;
+}
+
