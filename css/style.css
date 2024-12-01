@@ -795,12 +795,6 @@ padding: 0 5px;
   }
 
 
-
-
-
-
-
-
 .graphic {
     display: flex;
     gap: 44px;
@@ -904,7 +898,7 @@ footer {
     /*描画位置※位置は適宜調整してください*/
 	position:absolute;
 	left:50%;
-	bottom:10px;
+	bottom:0%;
     /*全体の高さ*/
 	height:170px;
 }

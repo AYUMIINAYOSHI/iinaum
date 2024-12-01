@@ -19,6 +19,75 @@ div.workpage main div.works_text h2 {
 
 div.workpage section ul {
     display: flex;
-    gap: 66px;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
+div.workpage section ul li {
+   width: 30%;
+   margin-bottom: 5%;
+}
+
+div.workpage section ul li div.works {
+    background-color: #FFFFFF;
+    border: 1px solid #0C4B2F;
+    border-radius: 0 15% 0 0;
+    width: 100%;
+    height: 100%;
+    padding: 1.2em;
+    box-sizing: border-box;
+}
+
+div.workpage section ul li div.works:hover .works .sen3 {
+    animation: sen3anim 1s infinite;
+
+}
+
+@keyframes sen3anim {
+    0%{
+        width: 0%;
+    }
+
+    100%{
+        width: 100%;
+    }
+}
+
+div.workpage section ul li div.works:hover {
+    border-radius: 0 0 0 0;
+    transition: 0.5s; 
+}
+
+
+
+.works .works_title {
+    font-size: 18px;
+}
+
+.view_box {
+    margin-top: 0;
+    display: flex;
+    align-items: flex-end;
+    /* gap: 10px; */
+    justify-content: space-between;
+}
+
+.works .sen3 {
+    margin-top: 1em;
+    width: 40%;
+}
+
+.works .sen3 span {
+    width: 100%;
+}
+
+/*
+div.workspace section ul.work_box li div.works {
+    background-color: #FFFFFF;
+    border: 1px solid #0C4B2F;
+    border-radius: 0 15% 0 0;
+    height: 517px;
+    padding: 20px 0px 0px 30px;
+    box-sizing: border-box;
+}
+*/
