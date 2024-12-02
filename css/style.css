@@ -861,6 +861,18 @@ footer {
     padding: 24px;
     font-size: 24px;
     display: inline-block;
+    cursor: pointer;
+    transition: opacity;
+}
+
+.contact_btn:hover {
+    background-color: #0C4B2F;
+    color:#FFFFFF;
+    padding: 24px;
+    font-size: 24px;
+    border: 1px #FFFFFF solid;
+    display: inline-block;
+    transition:.3s ease-in-out, color .3s ease-in-out;
 }
 
 .footer_nav {
@@ -898,7 +910,7 @@ footer {
     /*描画位置※位置は適宜調整してください*/
 	position:absolute;
 	left:50%;
-	bottom:0%;
+	bottom:5%;
     /*全体の高さ*/
 	height:170px;
 }

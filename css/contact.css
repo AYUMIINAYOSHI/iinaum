@@ -1,0 +1,96 @@
+@charset "utf-8";
+
+div.contactpage main div.contact_text {
+    text-align: center;
+    margin-top: 100px;
+}
+
+div.contactpage main div.contact_text p.title_en {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+div.contactpage main div.contact_text h2 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.form_box {
+    margin: 0 auto;
+}
+
+.btn_primary {
+    background-color: #0c4b2f;
+    border: 1px solid #0c4b2f;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-weight: bold;
+    line-height: 1;
+    max-width: 240px;
+    padding: 24px;
+    text-align: center;
+    transition: background-color .3s ease-in-out, color .3s ease-in-out;
+    width: 100%;
+    &:hover {
+        background-color: #fff;
+        color: #0c4b2f;
+    }
+}
+.form {
+    padding: 40px;
+    text-align: center;
+    width: 700px;
+}
+.form_list {
+        margin-top: 24px;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        gap: 1.5em;
+    }
+    
+
+.form_title {
+    font-size: 18px;
+    width: 40%;
+    text-align: right;
+    .required {
+        color: #FF0000;
+        margin-left: 4px;
+    }
+}
+
+.form_input[type="text"],
+.form_input[type="email"] {
+    background-color: #FAFAFA;
+    border: 1px solid #CCC;
+    padding: 16px;
+    &::placeholder {
+        color: #aaa;
+    }
+}
+.form_input[type="checkbox"] {
+    margin-right: 4px;
+    appearance: auto;
+}
+.form_contents {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+    width: 60%;
+    label {
+        margin-right: 8px;
+    }
+}
+.error {
+    color: red;
+    font-size: 14px;
+}
+.btn_wrap {
+    display: flex;
+    justify-content: right;
+    margin-top: 40px;
+}

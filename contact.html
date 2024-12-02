@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact | iinaum</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/contact.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="contents contactpage">
+
+    <header>
+        <h1>IINAUM</h1>
+        <div class="nav">
+            <ul class="menu">
+                <li class="bg_green">contact</li>
+                <li class="bg_white">
+                    <div class="line">
+                        <span></span>
+                    </div>
+                    <span class="text">menu</span>
+                </li>
+            </ul>
+        </div>
+
+        <nav class="btn_nav">
+            <h1>IINAUM</h1>
+            <div class="sen1"><span></span></div>
+            <ul>
+                <li><a href="">HOME</a></li>
+                <li><a href="">ABOUT</a></li>
+                <li><a href="">CONCEPT</a></li>
+                <li><a href="">WORKS</a></li>
+                <li><a href="">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="contact_text">
+<p class="title_en">.contact</p>
+<h2>お問い合わせ</h2>
+<p>デザインに関してのご相談からEC運営のお悩み等お気軽にお問い合わせください。
+</p>
+        </div>
+    </main>
+
+  <div class="form_box">  
+    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeVhY1Ht7jrJUbgNElz2M8ViFW50lX698TU9fZyBZI2AH_xyQ/formResponse" id="form" class="form" method="post"
+    target="hidden_iframe" onsubmit="submitted=true;">
+        <dl class="form_wrap">
+            <div class="form_list">
+                <dt class="form_title a1_regular">お名前<span class="required">*</span></dt>
+                <dd class="form_contents">
+                    <input class="form_input a1_regular" type="text" value="" name="entry.1054516591" placeholder="田中　太郎">
+                </dd>
+            </div>
+            <div class="form_list">
+                <dt class="form_title a1_regular">メールアドレス<span class="required">*</span></dt>
+                <dd class="form_contents">
+                    <input class="form_input a1_regular" type="email" value="" name="entry.1611423685" placeholder="info@mail.com">
+                </dd>
+            </div>
+            <div class="form_list">
+                <dt class="form_title a1_regular">会社名<span class="required">*</span></dt>
+                <dd class="form_contents">
+                    <input class="form_input a1_regular" type="text" value="" name="entry.861908587" placeholder="株式会社〇〇">
+                </dd>
+            </div>
+            <div class="form_list">
+                <dt class="form_title a1_regular">メッセージ<span class="required">*</span></dt>
+                <dd class="form_contents">
+                    <input class="form_input a1_regular" type="text" value="" name="entry.450085904" placeholder="お問い合わせ内容をご記入ください">
+                </dd>
+            </div>
+        </dl>
+        <div class="btn_wrap">
+            <button id="send" class="form_submit btn_primary a1_bold" type="submit" jsname="entry.M2UYVd">送信</button>
+        </div>
+    </form>
+
+    <script type="text/javascript">
+        var submitted = false;
+      </script>
+      <iframe
+        name="hidden_iframe"
+        id="hidden_iframe"
+        style="display: none"
+        onload="if(submitted)  {window.location='thanks.html';}"
+      ></iframe>
+  </div> 
+
+
+    <footer>
+        <div class="footer_box">
+            <div class="footer_nav">
+                <nav>
+                    <ul>
+                        <li>ABOUT</li>
+                        <li>WORKS</li>
+                        <li>CONCEPT</li>
+                    </ul>
+                </nav>
+
+                <!-- 
+                <div class="contact_btn">
+                    CONTACT FORM →
+                </div>
+                -->
+
+            </div>
+
+            <div class="anim_2">
+                <span class="svg_1 wrapper1"><img src="./img/1x/en.svg" alt=""></span>
+                <span class="svg_2 wrapper4"><img src="./img/1x/kado.svg" alt=""></span>
+                <span class="svg_4 wrapper6"><img src="./img/1x/en.svg" alt=""></span>
+                <span class="svg_5 wrapper3"><img src="./img/1x/sen2.svg" alt=""></span>
+                <span class="svg_6 wrapper2"><img src="./img/1x/kado2.svg" alt=""></span>
+                <span class="svg_3 wrapper5"><img src="./img/1x/sen1.svg" alt=""></span>
+            </div>
+
+            <div class="copyright">@2024 Inayoshi Ayumi</div>
+
+        </div>
+
+
+       </footer>
+
+
+</div>
+
+
+
+
+<script>
+    $(function () {
+        // スクロールして表示領域に入ったらclass付与
+        $(window).on('scroll', function () {
+            const scrollY = $(this).scrollTop()
+            $('.inviewText').each(function(index, text) {
+                let textY = $(text).offset().top
+                const windowHeight = $(window).innerHeight()
+                if (scrollY + windowHeight > textY) {
+                    $(text).addClass('active')
+                }
+            })
+        })
+
+        $('.line').on('click', function () {
+            $('.line').toggleClass('open');
+
+        })
+
+    })
+
+    $(function () {
+        $('.line').click(function () {
+            $('.btn_nav').toggleClass('active');
+            $('.menu').toggleClass('active');
+            if ($('.menu .text').text() == 'menu') {
+                $('.menu .text').text('close');
+            } else {
+                $('.menu .text').text('menu');
+            }
+        });
+    });
+
+    $(function(){
+      $('.line').on('click', function(){
+      $('.btn_nav').toggleClass('is-active');
+    });
+    }());
+    </script>
+</body>
+</html>

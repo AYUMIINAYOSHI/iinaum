@@ -38,7 +38,16 @@ div.workpage section ul li div.works {
     box-sizing: border-box;
 }
 
-div.workpage section ul li div.works:hover .works .sen3 {
+.workpage .works .sen3 {
+    margin-top: 1em;
+    width: 40%;
+}
+
+div.workpage section ul li div.works .sen3 span {
+    width: 100%;
+}
+
+.works:hover .sen3 span {
     animation: sen3anim 1s infinite;
 
 }
@@ -64,7 +73,7 @@ div.workpage section ul li div.works:hover {
     font-size: 18px;
 }
 
-.view_box {
+div.workpage section ul li div.works .view_box {
     margin-top: 0;
     display: flex;
     align-items: flex-end;
@@ -72,14 +81,12 @@ div.workpage section ul li div.works:hover {
     justify-content: space-between;
 }
 
-.works .sen3 {
-    margin-top: 1em;
-    width: 40%;
+.viewmore {
+    width: 72px;
+    white-space: nowrap;
 }
 
-.works .sen3 span {
-    width: 100%;
-}
+
 
 /*
 div.workspace section ul.work_box li div.works {
