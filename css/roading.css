@@ -5,8 +5,8 @@
 }
 
 .roading .ellipse_1 {
-    width: 100px;
-    height: 100px;
+    width: 7vh;
+    height: 7vh;
     animation-name: bounce;
     animation-duration: 4s;
     animation-iteration-count: infinite;
@@ -15,12 +15,18 @@
 }
 
 .roading .ellipse_2 {
-    width: 10vh;
-    height: 10vh;
-    bottom: 20px;
+    width: 7vh;
+    height: 7vh;
+    bottom: 0px;
     left: 50%;
 }
 
+.roading .icon {
+    margin-top: 7em;
+    position: relative;
+    padding: 2em;
+    text-align: center;
+}
 
 @keyframes bounce {
     0%   { transform: scale(1.0, 1.0) translate(0%, 0%); } /* 初期状態 */

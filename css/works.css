@@ -47,7 +47,7 @@ div.workpage section ul li div.works .sen3 span {
     width: 100%;
 }
 
-.works:hover .sen3 span {
+.workpage .works:hover .sen3 span {
     animation: sen3anim 1s infinite;
 
 }

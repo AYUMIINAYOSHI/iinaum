@@ -71,6 +71,26 @@ h1 {
 }
 
 
+.bg_green2:hover {
+    background-color: #FFFFFF;
+    color:#0C4B2F;
+    border: 1px solid #0C4B2F;
+    transition:.3s ease-in-out, color .3s ease-in-out;
+}
+
+.bg_green2:hover .dli-arrow-right_w {
+
+        display: inline-block;
+        vertical-align: middle;
+        color: #0C4B2F;
+        line-height: 1;
+        position: relative;
+        width: 1em;
+        height: 0.1em;
+        background: currentColor;
+      }
+
+
 .bg_green {
     background-color:#0C4B2F;
     color: white;
@@ -178,6 +198,20 @@ padding: 0 5px;
     opacity: 1;
 }
 
+@media screen and (max-width:375px) {
+    .btn_nav {
+        height: 667px;
+        display: block;
+        
+    }
+
+    .btn_nav .sen1 {/*効かない*/
+        height: 1px;
+        width: 150px;
+        background-color: #0C4B2F;
+    }
+    
+}
 
 
 
@@ -267,7 +301,15 @@ padding: 0 5px;
 }
 
 
-.circle{
+@media screen and (max-width:375px) {
+    .anim_1 {
+        position: relative;
+        height: 667px;
+    }
+}
+
+
+.circle {
     /*円の見た目を設定*/
     width: 100px;
     height: 100px;
@@ -279,6 +321,30 @@ padding: 0 5px;
     left: calc(50% - 50px);
     top: calc(50% - 50px);
 }
+
+/*回るテキストを出現させたい
+.circle_text {
+    width: 50px;
+    height: 50px;
+    margin: 40px auto;
+    font-size: 12px;
+  animation: donut-spin 10s linear infinite;
+  }
+  div svg {
+    overflow: visible;
+  }
+  div path {
+    fill: none;
+  }
+  div text {
+    fill: #FFFFFF;
+  }
+@keyframes donut-spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+  */
 
 
 .illustration {
@@ -491,8 +557,8 @@ padding: 0 5px;
 
 .ellipse_1 {
     background: #0C4B2F;
-    width: 300px;
-    height: 300px;
+    width: 35vh;
+    height: 35vh;
     border-radius: 48% 52% 20% 80% / 40% 72% 28% 60%;
     margin: 0 auto;
     z-index: 3;
@@ -505,8 +571,8 @@ padding: 0 5px;
 }
 
 .ellipse_3 {
-    width: 299px;
-    height: 299px;
+    width: 35vh;
+    height: 35vh;
     margin: 0 auto;
     z-index: 2;
     position: absolute;
@@ -585,7 +651,7 @@ padding: 0 5px;
     background-color: #FFFFFF;
     position: relative;
     z-index: 0;
-    border-radius: 0 30% 0 0;
+    border-radius: 0 50px 0 0;
     overflow: hidden;
     padding: 2rem;
 }
@@ -617,7 +683,7 @@ padding: 0 5px;
     width: calc(100% - 2px);
     height: calc(100% - 2px);
     background: white;
-    border-radius: 0 30% 0 0;
+    border-radius: 0 50px 0 0;
 }
 
 /* .profile_border {
@@ -898,7 +964,22 @@ footer {
 	100% {opacity:1;}
 }
 
+@media screen and (max-width:375px) {
 
+    footer {
+       width: 500px;
+       padding: 0.5em;
+    } 
+    .footer_box ul{
+        display: block;
+    }
+    .footer_box nav ul li {
+        font-size: 16px;
+        margin-bottom: 35px;
+
+    }
+    
+}
 
 
 
@@ -1057,23 +1138,23 @@ footer {
 
 @keyframes diagonal-move-anim {
 
-	0% {
-		transform: translate(-20%, -100%);
-	}
+    0% {
+        transform: translate(-20%, -100%);
+    }
 
     30% {
-		transform: translate(-30%, 200%);
+        transform: translate(-30%, 200%);
         
-	}
+    }
 
-	
+    
 
-	50% {
-		transform: translate(500%, -50%);
-	}
+    50% {
+        transform: translate(500%, -50%);
+    }
     100% {
-		transform: translate(150%, 0%);
-	}
+        transform: translate(150%, 0%);
+    }
 
 
 }
@@ -1167,8 +1248,181 @@ footer {
 }
 
 
+@media screen and (max-width:375px) {
+    @keyframes diagonal-move-anim {
 
-  /*要素をふわふわ
+        0% {
+            transform: translate(-20%, -100%);
+        }
+    
+        30% {
+            transform: translate(-30%, 100%);
+            
+        }
+    
+        
+    
+        50% {
+            transform: translate(50%, -50%);
+        }
+        100% {
+            transform: translate(100%, 0%);
+        }
+    
+    
+    }
+    
+    @keyframes diagonal-move-anim2 {
+    
+        0% {
+            transform: translate(0, 0) rotate(0deg);
+        }
+    
+        50% {
+            transform: translate(-50px, -50px);
+            
+        }
+    
+        100% {
+            transform: translate(0px, -150px) rotate(180deg);
+        }
+    }
+    
+    
+    @keyframes diagonal-move-anim3 {
+    
+        0% {
+            transform: translate(0, 0) rotate(0deg);
+        }
+    
+        50% {
+            transform: translate(150px, 150px) rotate(-50deg);
+            
+        }
+    
+        100% {
+            transform: translate(0px, 300px) rotate(-90deg);
+        }
+    }
+    
+    @keyframes diagonal-move-anim4 {
+    
+        0% {
+            transform: translate(0, 0) rotate(10deg);
+        }
+    
+        50% {
+            transform: translate(100px, 100px) rotate(90deg);
+            
+        }
+    
+        100% {
+            transform: translate(100px, -150px) rotate(180deg);
+        }
+    }
+    
+    @keyframes diagonal-move-anim5 {
+    
+        0% {
+            transform: translate(0, 0) rotate(0deg);
+        }
+    
+        50% {
+            transform: translate(-150px, -150px);
+            
+        }
+    
+        100% {
+            transform: translate(-100px, 100px) rotate(90deg);
+        }
+    }
+    
+    @keyframes diagonal-move-anim6 {
+    
+        0% {
+            transform: translate(20%, 100%);
+        }
+    
+        30% {
+            transform: translate(0%, -100%);
+            
+        }
+    
+        
+    
+        50% {
+            transform: translate(-100%, 50%);
+        }
+        100% {
+            transform: translate(-50%, 0%);
+        }
+    
+    
+    }
+}
+
+
+
+  /*要素をふわふわ*/
+
+
+  /*矢印→ 緑*/
+
+  .dli-arrow-right {
+    display: inline-block;
+    vertical-align: middle;
+    color: #0c4b2f;
+    line-height: 1;
+    position: relative;
+    width: 1em;
+    height: 0.1em;
+    background: currentColor;
+  }
+  
+  .dli-arrow-right::before {
+    content: '';
+    width: 0.65em;
+    height: 0.65em;
+    border: 0.1em solid currentColor;
+    border-left: 0;
+    border-bottom: 0;
+    transform: rotate(45deg);
+    transform-origin: top right;
+    position: absolute;
+    top: 50%;
+    right: -0.05em;
+    box-sizing: border-box;
+  }
+
+   /*矢印→ 白*/
+
+   .dli-arrow-right_w {
+    display: inline-block;
+    vertical-align: middle;
+    color: #FFFFFF;
+    line-height: 1;
+    position: relative;
+    width: 1em;
+    height: 0.1em;
+    background: currentColor;
+  }
+  
+  .dli-arrow-right_w::before {
+    content: '';
+    width: 0.65em;
+    height: 0.65em;
+    border: 0.1em solid currentColor;
+    border-left: 0;
+    border-bottom: 0;
+    transform: rotate(45deg);
+    transform-origin: top right;
+    position: absolute;
+    top: 50%;
+    right: -0.05em;
+    box-sizing: border-box;
+  }
+
+  
  
     
 
