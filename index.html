@@ -73,6 +73,8 @@
                         </svg>
                       </div>
                       -->
+
+                      <div></div>
                  </div>
                 </div>
 
@@ -81,6 +83,8 @@
                <div class="scrolldown1"><span>Scroll</span></div>
             </div>
         </main>
+
+
 
         <section class="illustration">
             <div class="illustration_1">
@@ -186,24 +190,25 @@
                 </div>
             </div>
 
-            <div class="bg_green2">View More &nbsp;<span class="dli-arrow-right_w"></span></div>
+            <div class="works_btn">
+                <div class="bg_green2">View More &nbsp;<span class="dli-arrow-right_w"></span></div>
 
-            <div class="slide_btn splide__arrows">
-            <button class="splide__arrow splide__arrow--prev" type="button" aria-label="Go to last slide" aria-controls="splide01-track">◀︎</button>
-            <div class="tatesen"></div>
-            
-                <div class="pagination">
-                    <span id="slide-current"></span>
-                    <span>|</span>
-                    <span id="slide-length"></span>
-                  </div>
-            
-            <div class="tatesen"></div>
-            <button class="splide__arrow splide__arrow--next" type="button" >▶︎</button>
+                <div class="slide_btn splide__arrows">
+                <button class="splide__arrow splide__arrow--prev" type="button" aria-label="Go to last slide" aria-controls="splide01-track">◀︎</button>
+                <div class="tatesen"></div>
+                
+                    <div class="pagination">
+                        <span id="slide-current"></span>
+                        <span>|</span>
+                        <span id="slide-length"></span>
+                    </div>
+                
+                <div class="tatesen"></div>
+                <button class="splide__arrow splide__arrow--next" type="button" >▶︎</button>
+                </div>
             </div>
 
-
-            <div class="pages"></div>
+            
         </div>
 
         <div class="splide_wrapper">
@@ -217,7 +222,7 @@
                         <p class="works_title">トラベルメディアTRRRIP.様</p>
                         <div class="view_box">
                             <span class="sen3"><span></span></span>
-                            <span>View More</span>
+                            <span class="view_text">View More</span>
                             <span><span class="dli-arrow-right"></span></span>
                         </div>
                     </div>
@@ -231,7 +236,7 @@
                         <p class="works_title">トラベルメディアTRRRIP.様</p>
                         <div class="view_box">
                             <span class="sen3"><span></span></span>
-                            <span>View More</span>
+                            <span class="view_text">View More</span>
                             <span><span class="dli-arrow-right"></span></span>
                         </div>
                       </div>
@@ -245,7 +250,7 @@
                         <p class="works_title">トラベルメディアTRRRIP.様</p>
                         <div class="view_box">
                             <span class="sen3"><span></span></span>
-                            <span>View More</span>
+                            <span class="view_text">View More</span>
                             <span><span class="dli-arrow-right"></span></span>
                         </div>
                     </div>
@@ -399,11 +404,12 @@
         perMove: 1,
         gap: 44,
         pagination: false, // ページネーションを非表示
-        breakpoints: {
-            640: {
-            height: '6rem',
-            },
-        },
+    //    breakpoints: {
+     //        640: {
+    //         height: '6rem',
+     //      },
+            
+    //    },
     });
     mySplide.mount();
 
@@ -492,6 +498,7 @@ if(index == 1 && i == 30){
 });// ここまで画面が読み込まれたらすぐに動かしたい場合の記述
 
 
+
 /*
     // 親要素(container)の範囲で跳ね返るアニメーション
     const ball =$('.wrapper1')
@@ -559,6 +566,19 @@ $(function () {
             $(".circle").css({
                 "transform": "scale(" + sum + ")"
             })
+                    // 円のスケールが5より大きくなったら
+                    if (sum > 5) {
+                var opacity = (sum - 5) / (maxScale - 5)
+                // 画像を段々と表示させていく
+                $(".circle div").css({
+                    "opacity": opacity
+                })
+            } else {
+                // 初期状態では画像は表示させない
+                $(".circle div").css({
+                    "opacity": 0
+                });
+            }    
         } else {
             // 最大まで大きくなった後、円を小さく
             var scale = maxScale - (scroll - (50 * (maxScale  - 1))) / 50;
@@ -567,6 +587,22 @@ $(function () {
             $(".circle").css({
                 "transform": "scale(" + scale + ")"
             })
+
+
+            // 最大スケールから、5までの間
+            if (scale <= maxScale && scale > 5) {
+                var fadeOutOpacity = (scale - 5) / (maxScale - 5);
+                // 画像をだんだんと透過させていく
+                $(".circle div").css({
+                    "opacity": fadeOutOpacity
+                });
+            } else {
+                // 最終的には全く見えない状態に
+                $(".circle div").css({
+                    "opacity": 0
+                });
+            }
+
 
             // 最小サイズになったら円をフェードアウト
             if (scale == 1) {
