@@ -198,66 +198,6 @@ padding: 0 5px;
     opacity: 1;
 }
 
-@media screen and (max-width:375px) {
-    body {
-        font-size: 14px;
-        line-height: 1.7em;
-    }
-
-    .contents {
-        max-width: 375px;
-        margin: 0 auto;
-    }
-    
-    header {
-        position: fixed;
-        padding:5px;
-    }
-
-    h1 {
-        font-size: 32px;
-    }
-
-    .btn_nav {
-        height: 667px;
-        display: block;
-        
-    }
-
-    .btn_nav .sen1 {/*効かない*/
-        height: 1px;
-        width: 150px;
-        background-color: #0C4B2F;
-    }
-
-    .bg_green,.bg_white {
-        width:88px;
-        height:34px;
-        padding-top: 0.4em;
-        text-align: center;
-    }
-
-    header .nav .menu {
-        font-size: 14px;
-        align-items: center;
-
-    }
-
-    .line span {
-        width:20px;
-    }
-    
-    
-    .line span::after {
-        content: "";
-        width:20px;
-    }
-
-
-
-}
-
-
 
 
 .btn_nav ul {
@@ -290,6 +230,77 @@ padding: 0 5px;
  background-color: transparent;
  color: transparent;
 }
+
+
+@media screen and (max-width:375px) {
+    body {
+        font-size: 14px;
+        line-height: 1.7em;
+    }
+
+    .contents {
+        max-width: 375px;
+        margin: 0 auto;
+    }
+    
+    header {
+        position: fixed;
+        padding:5px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .btn_nav {
+        height: 667px;
+        display: block;
+        font-size: 24px;
+        text-align: center;
+        padding: 100px 0;
+        
+    }
+
+    .btn_nav ul {
+        padding-left: 35%;
+    }
+
+    .btn_nav .sen1 {/*効かない*/
+        height: 1px;
+        width: 200px;
+        background-color: #0C4B2F;
+        margin: 50px auto;
+    }
+
+    .bg_green,.bg_white {
+        width:88px;
+        height:34px;
+        padding-top: 0.4em;
+        text-align: center;
+    }
+
+    header .nav .menu {
+        font-size: 14px;
+        align-items: center;
+
+    }
+
+    .line span {
+        width:20px;
+    }
+    
+    
+    .line span::after {
+        content: "";
+        width:20px;
+    }
+
+
+
+}
+
+
+
 
 .anim_1 img {
     width: 120px;
@@ -1204,7 +1215,7 @@ footer {
 	left:50%;
 	bottom:5%;
     /*全体の高さ*/
-	height:170px;
+	height:100px;
 }
 
 /*Scrollテキストの描写*/

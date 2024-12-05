@@ -14,7 +14,7 @@
 
 .concept section div.text_box {
     text-align: center;
-    width: 600px;
+    max-width: 600px;
     display: inline-block;
 }
 
@@ -24,11 +24,43 @@
     text-align: left;
     margin-top: 50px;
     margin-bottom: 50px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .concept section div.text_box p.text {
     text-align: left;
     line-height: 2em;
+    margin: 10px auto;
+
+}
+
+@media screen and (max-width:375px) {
+    .concept main div {
+        text-align: center;
+    }
+    
+    .concept main div.title_en {
+        text-align: left;
+        display: inline-block;
+        line-height: 1.5em;
+    }
+
+    .concept section h2.title_ja {
+        font-size: 32px;
+        text-align: left;
+        writing-mode: vertical-rl;
+        line-height: 1.5em;
+    }
+
+    .ellipse_1, .ellipse_2 {
+        width: 20vh;
+        height: 20vh;
+    }
+
+    .icon {
+        padding: 6em 4em 4em 0em;
+    }
 
 }
 
