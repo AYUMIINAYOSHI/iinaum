@@ -1125,6 +1125,7 @@ padding: 0 5px;
 
     .articulate h2 {
         font-size:32px;
+        margin-top: 0;
     }
 
     .title_en span {
@@ -1289,6 +1290,7 @@ padding: 0 5px;
     background: transparent;
     position: initial;
     transform: translateY(0);
+    color:#0C4B2F;
 }
 
 .splide_wrapper {
@@ -1399,14 +1401,14 @@ footer {
 
 .footer_box nav ul li {
     color: #FFFFFF;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .contact_btn {
     background-color: #FFFFFF;
     color:#0C4B2F;
-    padding: 24px;
-    font-size: 24px;
+    padding: 20px;
+    font-size: 20px;
     display: inline-block;
     cursor: pointer;
     transition: opacity;
@@ -1415,8 +1417,8 @@ footer {
 .contact_btn:hover {
     background-color: #0C4B2F;
     color:#FFFFFF;
-    padding: 24px;
-    font-size: 24px;
+    padding: 20px;
+    font-size: 20px;
     border: 1px #FFFFFF solid;
     display: inline-block;
     transition:.3s ease-in-out, color .3s ease-in-out;
@@ -1484,6 +1486,7 @@ footer {
 
     footer {
        padding: 0.5em;
+       height: 735px;
     } 
     .footer_box ul{
         display: block;
