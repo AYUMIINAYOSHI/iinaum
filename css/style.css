@@ -1452,8 +1452,12 @@ footer {
 
     footer {
        padding: 0.5em;
-       height: 620px;
+       /*height: 620px;*/
     } 
+
+    .footer_box nav {
+        display: block;
+    }
 
     .footer_box nav ul li {
         font-size: 14px;
@@ -1477,6 +1481,11 @@ footer {
     .copyright {
         left:35%;
         font-size: 10px;
+    }
+
+    .footer_box ul {
+        flex-direction: column;
+        gap: 0;
     }
 
 
