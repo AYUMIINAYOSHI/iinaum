@@ -199,6 +199,25 @@ padding: 0 5px;
 }
 
 @media screen and (max-width:375px) {
+    body {
+        font-size: 14px;
+        line-height: 1.7em;
+    }
+
+    .contents {
+        max-width: 375px;
+        margin: 0 auto;
+    }
+    
+    header {
+        position: fixed;
+        padding:5px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
     .btn_nav {
         height: 667px;
         display: block;
@@ -210,7 +229,32 @@ padding: 0 5px;
         width: 150px;
         background-color: #0C4B2F;
     }
+
+    .bg_green,.bg_white {
+        width:88px;
+        height:34px;
+        padding-top: 0.4em;
+        text-align: center;
+    }
+
+    header .nav .menu {
+        font-size: 14px;
+        align-items: center;
+
+    }
+
+    .line span {
+        width:20px;
+    }
     
+    
+    .line span::after {
+        content: "";
+        width:20px;
+    }
+
+
+
 }
 
 
@@ -300,14 +344,7 @@ padding: 0 5px;
     left: 50%;
 }
 
-
-@media screen and (max-width:375px) {
-    .anim_1 {
-        position: relative;
-        height: 667px;
-    }
-}
-
+ 
 
 .circle {
     /*円の見た目を設定*/
@@ -321,6 +358,34 @@ padding: 0 5px;
     left: calc(50% - 50px);
     top: calc(50% - 50px);
 }
+
+
+@media screen and (max-width:375px) {
+    .anim_1 {
+        position: relative;
+        height: 667px;
+    }
+
+    .anim_1 img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .circle {
+        width: 80px;
+        height: 80px;
+        transform: scale(1);
+        background-color: #0C4B2F;
+        border-radius: 50%;
+        position: fixed;
+        left: 160px;
+        top: 350px;
+    }
+    
+
+
+
+}   
 
 /*回るテキストを出現させたい
 .circle_text {
@@ -354,7 +419,7 @@ padding: 0 5px;
 
 .illustration_1 {
     position:relative;
-    width:870px;
+    max-width:870px;
     height: 320px;
     margin: 0 auto;
 }
@@ -395,7 +460,7 @@ padding: 0 5px;
 
 .illustration_2 {
     position: relative;
-    width:800px;
+    max-width:800px;
     height: 350px;
     margin: 0 auto;
 }
@@ -443,7 +508,7 @@ padding: 0 5px;
 
 .illustration_3 {
     position:relative;
-    width: 870;
+    max-width:  870px;
     height:641px;
     margin: 0 auto;
 }
@@ -495,6 +560,39 @@ padding: 0 5px;
     }
   }
 
+
+@media screen and (max-width:375px) {
+    .ue_mae {
+        top:-440px;
+    }
+
+    .illustration_1 , .illustration_2 {
+        height: 150px;
+    }
+
+    .illustration_3 {
+        height: 300px;
+    }
+
+
+    .mannaka_ushiro {
+        top: -100%;
+    }
+
+    .mannaka_mae {
+        top: -300%;
+    }
+
+    .shitaushiro {
+        top: 180%;
+    }
+
+    .shitamae {
+        top: 0%;
+    }
+
+
+}
 
 
 
@@ -584,6 +682,29 @@ padding: 0 5px;
 }
 
 
+@media screen and (max-width: 375px) {
+    .ellipse_1 , .ellipse_3 {
+        width:25vh;
+        height: 25vh;
+    }
+
+    .icon {
+        padding: 4em 4em 4em 0em;
+    }
+
+    .anim_2 {
+        height: 500px;
+    }
+
+    .anim_2 img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+
+
+
 .articulate h2 {
     -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
@@ -617,7 +738,8 @@ padding: 0 5px;
 .title_ja {
     font-size: 40px;
     font-weight: bold;
-
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .title_box {
@@ -742,6 +864,65 @@ padding: 0 5px;
 		width: 100%;
 	}
 }
+
+
+
+@media screen and (max-width:375px) {
+    .profile_box {
+        display: block;
+    }
+
+    .profile_box img {
+        margin-bottom: 2em;
+    }
+
+    .title_box {
+        display: block;
+        padding-bottom: 15px;
+    }
+
+    .articulate_en h2 {
+        margin: 0 auto;
+        line-height: 1.5;
+        font-size: 28px;
+        padding: 88px 0;
+    }
+
+    .articulate_en {
+        padding: 1em;
+    }
+
+    .title {
+        padding: 0;
+    }
+
+    .articulate h2 {
+        font-size:32px;
+    }
+
+    .title_en span {
+        left: 25%;
+    }
+
+    .title_en {
+        font-size: 16px;
+    }
+    
+    .title_ja {
+        font-size: 24px;
+    }
+
+    .aboutme .text {
+        font-size: 12px;
+    }
+}
+
+
+
+
+
+
+
 
 .works {
     background-color: #FFFFFF;
@@ -892,6 +1073,17 @@ padding: 0 5px;
 }
  
 
+@media screen and (max-width:375px) {
+    .works_box {
+        display: block;
+    }
+
+    .works_box .splide {
+        display: block;
+    }
+    
+}
+
 
 
 
@@ -967,7 +1159,7 @@ footer {
 @media screen and (max-width:375px) {
 
     footer {
-       width: 500px;
+       width: 375px;
        padding: 0.5em;
     } 
     .footer_box ul{
@@ -978,7 +1170,26 @@ footer {
         margin-bottom: 35px;
 
     }
+
+    .contact_btn {
+        font-size: 16px;
+        width: 180px;
+        height: 45px;
+        padding: 0.7em 0 0 0;
+        text-align: center;
+        box-sizing: border-box;
+    }
     
+    .footer_box {
+        padding-top: 25px;
+    }
+
+    .copyright {
+        left:35%;
+        font-size: 10px;
+    }
+
+
 }
 
 
@@ -1080,6 +1291,16 @@ footer {
   }
         
   }
+
+  
+@media screen and (max-width:375px) {
+    .ellipse_2 {
+        width:25vh;/*横幅*/
+        height: 25vh;/*縦幅*/
+        left: 30%;
+    }
+    
+}
 
   /** ▼要素をふわふわ*/
   .container {
