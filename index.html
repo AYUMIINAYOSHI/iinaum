@@ -13,7 +13,10 @@
     <link rel="stylesheet" type="text/css" href="css/8-11.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="path-to-the-file/splide.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=Element.prototype.closest%2CArray.from%2CIntersectionObserver%2CObject.assign%2CArray.prototype.includes%2CString.prototype.includes"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.6.1/dist/simpleParallax.min.js"></script>
+
 
 </head>
 
@@ -88,19 +91,19 @@
 
         <section class="illustration">
             <div class="illustration_1">
-              <img src="./img/SVG/ue_ushiro.svg" alt="" class="ue_ushiro">
-              <img src="./img/SVG/ue_mae.svg" alt="" class="ue_mae">
+              <img src="./img/SVG/ue_ushiro.svg" alt="" class="ue_ushiro thumbnail_2">
+              <img src="./img/SVG/ue_mae.svg" alt="" class="ue_mae thumbnail">
             </div>
    
             <div class="illustration_2">
-              <img src="./img/SVG/mannaka_ushiro.svg" alt="" class="mannaka_ushiro">
-              <img src="./img/SVG/mannaka_mae.svg" alt="" class="mannaka_mae">
+              <img src="./img/SVG/mannaka_ushiro.svg" alt="" class="mannaka_ushiro thumbnail_2">
+              <img src="./img/SVG/mannaka_mae.svg" alt="" class="mannaka_mae thumbnail">
             </div>
             
             <div class="illustration_3">
-              <img src="./img/SVG/shitaushiro.svg" alt="" class="shitaushiro">  
+              <img src="./img/SVG/shitaushiro.svg" alt="" class="shitaushiro thumbnail_2">  
               <img src="./img/SVG/tree.svg" alt="" class="tree">  
-              <img src="./img/SVG/shitamae.svg" alt="" class="shitamae">
+              <img src="./img/SVG/shitamae.svg" alt="" class="shitamae thumbnail">
             </div>
         
 
@@ -619,10 +622,34 @@ $(function () {
 
 
 
-
-
-
 </script>
+
+
+<script>
+    //▼以下パララックス　simpleparallax
+    var images = document.querySelectorAll('.thumbnail');
+new simpleParallax(images, {
+	orientation: 'up',
+	scale: 1.5,
+	overflow: true,
+	delay: 2,
+});
+</script>
+
+
+<script>
+    //▼以下パララックス（後ろ）simpleparallax
+    var images = document.querySelectorAll('.thumbnail_2');
+new simpleParallax(images, {
+	orientation: 'down',
+	scale: 1.2,
+	overflow: true,
+	delay: 1,
+});
+</script>
+    
+    
+    
 
 
 

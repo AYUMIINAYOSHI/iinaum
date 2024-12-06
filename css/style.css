@@ -540,6 +540,16 @@ padding: 0 5px;
     margin-top: 120vh;
 }
 
+@media screen and (max-width:767px) {
+    .illustration {
+        margin-top: 220vh;
+    }
+    
+    
+}
+
+/*▼以下パララックス　animation-timeline (Safari効かない）
+
 
 .illustration_1 {
     position:relative;
@@ -753,8 +763,133 @@ padding: 0 5px;
 
 }
 
+*/
 
 
+
+.illustration_1 {
+    position:relative;
+    max-width:870px;
+    height: 320px;
+    margin: 0 auto;
+}
+
+
+.ue_mae {
+    position:absolute;
+    top: -20px;
+    right: 0;
+
+}
+
+
+
+.illustration_2 {
+    position: relative;
+    max-width:800px;
+    height: 350px;
+    margin: 0 auto;
+}
+
+.mannaka_ushiro {
+    position:absolute;
+    top: 10%;
+    right: 17%;
+    width: 80%;
+}
+
+
+
+
+.mannaka_mae {
+    position: absolute;
+    top: 11%;
+    right: 11%;
+    width: 80%;
+}
+
+.illustration_3 {
+    position:relative;
+    max-width:  870px;
+    height:641px;
+    margin: 0 auto;
+}
+
+.tree {
+    position: absolute;
+    top:20%;
+    left:35%;
+    z-index: 2;
+    width: 30%;
+
+}
+
+.shitamae {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    z-index: 3;
+    width: 60%;
+}
+
+
+.shitaushiro {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    z-index: 1;
+    width: 60%;
+}
+
+@media screen and (max-width:767px) {
+    .ue_mae {
+        top:-170px;
+    }
+
+    .ue_ushiro {
+        position: absolute;
+        top: -200px;
+    }
+
+    .illustration_1 , .illustration_2 {
+        height: 150px;
+    }
+
+    .illustration_3 {
+        height: 100px;
+    }
+
+
+    .mannaka_ushiro {
+        top: -180px;
+    }
+
+    .mannaka_mae {
+        top: -130px;
+    }
+
+    .shitaushiro {
+        top: -100px;
+    }
+
+    .shitamae {
+        top: -100px;
+    }
+
+    
+.tree {
+    position: absolute;
+    top:-100px;
+    left:50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    width: 30%;
+
+}
+
+
+
+}
 
 
 
