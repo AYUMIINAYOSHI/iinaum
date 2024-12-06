@@ -2,6 +2,10 @@
 
 .roading {
     text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .roading .ellipse_1 {
@@ -22,7 +26,6 @@
 }
 
 .roading .icon {
-    margin-top: 7em;
     position: relative;
     padding: 2em;
     text-align: center;
