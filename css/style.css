@@ -453,7 +453,7 @@ padding: 0 5px;
 .circle div {
     width: 100%;
     height: 100%;
-    background-image: url(img/1x/3564643_l.jpg);
+    background-image: url(../img/1x/3564643_l.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 0;
@@ -1441,7 +1441,8 @@ padding: 0 5px;
 .copyright {
     position:absolute;
     bottom: 10px;
-    left: 43%;
+    left: 50%;
+    transform: translateX(-50%);
     text-align:center;
     color:#C3AE88;
     font-size: 14px;
@@ -1906,23 +1907,18 @@ padding: 0 5px;
     @keyframes diagonal-move-anim6 {
     
         0% {
-            transform: translate(0%, 100%);
-        }
-    
-        30% {
-            transform: translate(0%, -100%);
-            
-        }
-    
-        
-    
-        50% {
-            transform: translate(-200%, 50%);
-        }
-        100% {
             transform: translate(-50%, 0%);
         }
-    
+        
+        30% {
+            transform: translate(-100%, 200%);
+        }
+        50% {
+            transform: translate(-200%, -200%);
+        }
+        100% {
+            transform: translate(-100%, 0%);
+        }
     
     }
 }
@@ -2021,21 +2017,17 @@ padding: 0 5px;
     @keyframes diagonal-move-anim6 {
     
         0% {
-            transform: translate(0%, 100%);
+            transform: translate(-50%, 0%);
         }
-    
-        30% {
-            transform: translate(0%, -100%);
-            
-        }
-    
         
-    
+        30% {
+            transform: translate(-100%, 200%);
+        }
         50% {
-            transform: translate(-200%, 50%);
+            transform: translate(-200%, -200%);
         }
         100% {
-            transform: translate(-50%, 0%);
+            transform: translate(-100%, 0%);
         }
     
     
