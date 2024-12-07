@@ -7,10 +7,27 @@
 }
 
 .thanks_text .thanks_ttl {
-    font-size: 1.8em;
+    font-size: 1.5em;
     font-weight: bold;
+    text-align: left;
+    display: inline-block;
 }
 
 .thanks_text p {
-    margin-top: 10px;
-  }
+  margin-top: 10px;
+  line-height: 1.7;
+  text-align: left;
+  display: inline-block;
+}
+
+.thankspage main div.icon div.ellipse_1 {
+
+    width: 25vh;
+    height: 25vh;
+}
+
+.thankspage main div.icon div.ellipse_2 {
+
+  width: 25vh;
+  height: 25vh;
+}

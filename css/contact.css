@@ -19,6 +19,8 @@ div.contactpage main div.contact_text h2 {
 
 .form_box {
     margin: 0 auto;
+    max-width: 600px;
+    transform: translateX(-10%);
 }
 
 .btn_primary {
@@ -40,9 +42,9 @@ div.contactpage main div.contact_text h2 {
     }
 }
 .form {
-    padding: 40px;
+    padding: 1em;
     text-align: center;
-    width: 700px;
+
 }
 .form_list {
         margin-top: 24px;
@@ -93,4 +95,50 @@ div.contactpage main div.contact_text h2 {
     display: flex;
     justify-content: right;
     margin-top: 40px;
+}
+
+@media screen and (max-width:767px) {
+    .form_title {
+        font-size: 1em;
+        width: 100%;
+        /* text-align: center; */
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .form_list {
+        flex-direction: column;
+    }
+
+    .form_contents {
+        display: flex;
+        flex-direction: column;
+        /* margin-top: 16px; */
+        width: 100%;
+        margin-top: 0;
+ 
+    }
+
+    .form_list {
+        gap: 0.5em;
+    }
+    
+    div.contactpage main div.contact_text h2 {
+        font-size: 24px;
+    }
+
+    div.contactpage main div.contact_text p.title_en {
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    div.contactpage main div.contact_text {
+        margin-top: 60px;
+    }
+
+    .form_box {
+        transform: translateX(0%);
+    }
+    
 }

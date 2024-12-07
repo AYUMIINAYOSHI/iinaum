@@ -90,6 +90,21 @@ div.workpage section ul li div.works .view_box {
 
 
 @media screen and (max-width:767px) {
+
+    div.workpage main div.works_text {
+        margin-top: 45px;
+        margin-bottom: 45px;
+    }
+
+    div.workpage main div.works_text p.title_en {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    div.workpage main div.works_text h2 {
+        font-size: 24px;
+        font-weight: bold;
+    }
     
     div.workpage section ul {
         justify-content: space-around;

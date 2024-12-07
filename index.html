@@ -26,7 +26,7 @@
             <h1>IINAUM</h1>
             <div class="nav">
                 <ul class="menu">
-                    <li class="bg_green">contact</li>
+                    <a href="./contact.html"><li class="bg_green">contact</li></a>
                     <li class="bg_white">
                         <div class="line">
                             <span></span>
@@ -118,9 +118,9 @@
 
 
             <div class="icon">
-                <div class="ellipse_1">
+                <a href="./concept.html"><div class="ellipse_1">
                     <div class="ellipse_3"><img src="./img/1x/image3.png" alt=""></div>
-                </div>
+                </div></a>
                 
                 <div class="ellipse_2"></div>
                 <div class="title_en white"> <span>.concept</span></div>
@@ -141,7 +141,7 @@
             <div class="profile profile_border">
                 <div>
                     <div class="profile_box">
-                        <img src="https://placehold.jp/170x170.png" alt="">
+                        <img src="./img/profile_img" alt="">
                         <div>
                             <p>Designer / WEB / graphic</p>
                             <p>いーなうむ</p>
@@ -220,7 +220,7 @@
                 <li class="splide__slide js-open button-open" data-id="1">
                     <div class="works">
                         <p class="number">01</p>
-                        <p><img src="https://placehold.jp/280x280.png" alt=""></p>
+                        <p><img src="./img/完成図.jpeg" alt=""></p>
                         <p class="works_date">2024.10.27</p>
                         <p class="works_title">トラベルメディアTRRRIP.様</p>
                         <div class="view_box">
@@ -271,11 +271,11 @@
 <div class="modal-window" data-id="modal1">
   <button class="js-close button-close"><span></span>Close</button>
   <div>
-    <p><img src="https://placehold.jp/500x500.png" alt="">
+    <p><img src="./img/完成図.jpeg" alt="">
     </p>
     <div class="modal-window_textbox">
-    <p class="modal-window_title">モーダルNo.1タイトル</p>
-    <p class="modal-window_text">モーダルNo.1</p>
+    <p class="modal-window_title">(架空)トラベルメディアTRRRIP様</p>
+    <p class="modal-window_text">SNS投稿用,広告用バナーを作成いたしました。</p>
     </div>  
   </div>
 </div> 
@@ -332,7 +332,7 @@
                     </nav>
 
                     <div class="contact_btn">
-                        CONTACT FORM →
+                        CONTACT FORM <span class="dli-arrow-right"></span>
                     </div>
                 </div>
 
@@ -573,14 +573,20 @@ $(function () {
                     if (sum > 5) {
                 var opacity = (sum - 5) / (maxScale - 5)
                 // 画像を段々と表示させていく
-                $(".circle div").css({
+                $(".circle div:nth-child(2)").css({
+                    "opacity": opacity
+                })
+                $(".circle_text").css({
                     "opacity": opacity
                 })
             } else {
                 // 初期状態では画像は表示させない
-                $(".circle div").css({
+                $(".circle div:nth-child(2)").css({
                     "opacity": 0
                 });
+                $(".circle_text").css({
+                    "opacity": 0
+                })
             }    
         } else {
             // 最大まで大きくなった後、円を小さく
@@ -596,12 +602,12 @@ $(function () {
             if (scale <= maxScale && scale > 5) {
                 var fadeOutOpacity = (scale - 5) / (maxScale - 5);
                 // 画像をだんだんと透過させていく
-                $(".circle div").css({
+                $(".circle div:nth-child(2)").css({
                     "opacity": fadeOutOpacity
                 });
             } else {
                 // 最終的には全く見えない状態に
-                $(".circle div").css({
+                $(".circle div:nth-child(2)").css({
                     "opacity": 0
                 });
             }

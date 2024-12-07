@@ -95,6 +95,7 @@ h1 {
 .bg_green {
     background-color:#0C4B2F;
     color: white;
+    border: 1px solid #0C4B2F;
 }
 
 .slide_btn {
@@ -230,6 +231,7 @@ padding: 0 5px;
 .menu.active .bg_green {
  background-color: transparent;
  color: transparent;
+ border: transparent;
 }
 
 
@@ -257,7 +259,7 @@ padding: 0 5px;
         display: block;
         font-size: 24px;
         text-align: center;
-        padding: 100px 0;
+        padding: 150px 0;
         
     }
 
@@ -269,7 +271,7 @@ padding: 0 5px;
         height: 1px;
         width: 200px;
         background-color: #0C4B2F;
-        margin: 50px auto;
+        margin: 30px auto;
     }
 
     .bg_green,.bg_white {
@@ -331,12 +333,16 @@ padding: 0 5px;
         font-size: 32px;
     }
 
+    .profile_box h1 {
+        padding-top: 0.3em;
+    }
+
     .btn_nav {
         height: 667px;
         display: block;
         font-size: 24px;
         text-align: center;
-        padding: 100px 0;
+        padding: 150px 0;
         
     }
 
@@ -348,7 +354,7 @@ padding: 0 5px;
         height: 1px;
         width: 200px;
         background-color: #0C4B2F;
-        margin: 50px auto;
+        margin: 30px auto;
     }
 
     .bg_green,.bg_white {
@@ -450,7 +456,7 @@ padding: 0 5px;
     overflow: hidden;
 }
 
-.circle div {
+.circle div:nth-child(2) {
     width: 100%;
     height: 100%;
     background-image: url(../img/1x/3564643_l.jpg);
@@ -515,9 +521,14 @@ padding: 0 5px;
 .circle_text {
     width: 50px;
     height: 50px;
-    margin: 40px auto;
+    /*margin: 40px auto;*/
     font-size: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
   animation: donut-spin 10s linear infinite;
+    z-index: 99;
   }
   div svg {
     overflow: visible;
@@ -1308,7 +1319,7 @@ padding: 0 5px;
     border-radius: 0 15% 0 0;
     width: 346px;
     height: 517px;
-    padding: 20px 0px 0px 30px;
+    padding: 1.5em;
     box-sizing: border-box;
 }
 .works .number {
@@ -1321,7 +1332,7 @@ padding: 0 5px;
 }
 
 .view_box{
-    margin-top: 35px;
+    margin-top: 20px;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -1374,6 +1385,7 @@ padding: 0 5px;
     font-weight: bold;
     padding-top:33px;
     color: #0C4B2F;
+    line-height: 1.5;
   }
 
   .modal-window_textbox {
@@ -1451,6 +1463,11 @@ padding: 0 5px;
     z-index: 99;
 }
  
+.form_submit {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
 
 @media screen and (max-width:767px) {
 
@@ -1498,6 +1515,7 @@ padding: 0 5px;
         padding: 1.5em;
     }
 
+
     .works .number {
         font-size:27px;
         margin-bottom: 0.5em;
@@ -1533,7 +1551,7 @@ padding: 0 5px;
     background-color:#0C4B2F;
     margin-right: calc(50% - 50vw);
     margin-left: calc(50% - 50vw); 
-    margin-top: 128px;
+    margin-top: 15%;
     box-sizing: border-box;
     height: 735px;
     position: relative;
@@ -1570,6 +1588,11 @@ padding: 0 5px;
     border: 1px #FFFFFF solid;
     display: inline-block;
     transition:.3s ease-in-out, color .3s ease-in-out;
+}
+
+
+.contact_btn:hover .dli-arrow-right {
+    color: #FFFFFF;
 }
 
 .footer_nav {
@@ -1622,6 +1645,11 @@ padding: 0 5px;
         text-align: center;
         box-sizing: border-box;
     }
+
+    .contact_btn:hover {
+        font-size: 14px;
+        padding: 10px;
+    }
     
     .footer_box {
         padding-top: 25px;
@@ -1660,8 +1688,6 @@ padding: 0 5px;
         box-sizing: border-box;
     }
     
-
-
     .copyright {
         font-size: 10px;
     }
@@ -2208,6 +2234,12 @@ padding: 0 5px;
     box-sizing: border-box;
   }
 
+
+  .form_submit:hover .dli-arrow-right {
+    color: #FFFFFF;
+  }
+
+
    /*矢印→ 白*/
 
    .dli-arrow-right_w {
@@ -2234,6 +2266,10 @@ padding: 0 5px;
     top: 50%;
     right: -0.05em;
     box-sizing: border-box;
+  }
+
+  .form_submit:hover .dli-arrow-right_w {
+    color: #0C4B2F;
   }
 
   
