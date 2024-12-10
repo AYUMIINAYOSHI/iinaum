@@ -11,9 +11,21 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
+
+      <!-- ローディング画面 -->
+<div id ="loading">
+    <div class="roading">
+          <div class="icon">
+              <div class="ellipse_1"></div>
+              <div class="ellipse_2"></div>
+          </div>
+          <div>loading...</div>
+      </div>
+  </div>   
+  
     <div class="contents thankspage">
         <header>
-            <h1>IINAUM</h1>
+            <h1><a href="./index.html">IINAUM</a></h1>
             <div class="nav">
                 <ul class="menu">
                     <li class="bg_green">contact</li>
@@ -131,5 +143,13 @@
         });
         }());
         </script>
+
+<script>
+    //▼以下ローディング
+   window.onload = function () {
+   const roading = document.getElementById("loading");
+   roading.classList.add("loaded");
+ };
+</script>
 </body>
 </html>

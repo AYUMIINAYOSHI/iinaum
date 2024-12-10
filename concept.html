@@ -12,8 +12,20 @@
 </head>
 <body>
     <div class="contents concept">
+          <!-- ローディング画面 -->
+<div id ="loading">
+    <div class="roading">
+          <div class="icon">
+              <div class="ellipse_1"></div>
+              <div class="ellipse_2"></div>
+          </div>
+          <div>loading...</div>
+      </div>
+  </div>   
+
+
         <header>
-            <h1>IINAUM</h1>
+            <h1><a href="./index.html">IINAUM</a></h1>
             <div class="nav">
                 <ul class="menu">
                     <li class="bg_green">contact</li>
@@ -216,7 +228,13 @@ if(i == 19){
 });// ここまで画面が読み込まれたらすぐに動かしたい場合の記述
 </script>
 
-
+<script>
+    //▼以下ローディング
+   window.onload = function () {
+   const roading = document.getElementById("loading");
+   roading.classList.add("loaded");
+ };
+</script>
 
 </body>
 </html>
