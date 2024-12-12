@@ -377,8 +377,9 @@
     
            </footer>
 
-
-
+            <!-- トップに戻るボタン -->
+            <div id="pagetop" class="pagetop"><div class="pagetop-arrow"></div></div>
+            <!-- /トップに戻るボタン -->    
 
 
 
@@ -452,9 +453,36 @@ $('.scroll').jscroll();
     //▼以下ローディング
    window.onload = function () {
    const roading = document.getElementById("loading");
+   setTimeout(function(){
    roading.classList.add("loaded");
- };
+ },2000)
+};
 </script>
+
+<script>
+    // ▼以下TOPへ戻るボタン
+    let pageTop = document.getElementById("pagetop");
+    
+    window.addEventListener("scroll", () => {
+      // スクロール量
+      var scrollVolY = window.scrollY;
+    
+      /**
+       * ページ上端からのスクロール量が
+       * 100pxを超えたらTOPボタンを表示する
+       */
+      if (scrollVolY > 100) {
+        pageTop.classList.add("visible");
+      } else {
+        pageTop.classList.remove("visible");
+      }
+    });
+    
+    // TOPボタンがクリックされたらページトップへ遷移する
+    pageTop.addEventListener("click", () => {
+      window.scroll({ top: 0, behavior: "smooth" });
+    });
+    </script>
 
 </body>
 </html>
