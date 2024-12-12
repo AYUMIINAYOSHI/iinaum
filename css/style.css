@@ -1214,7 +1214,7 @@ padding: 0 5px;
         margin: 0 auto;
         line-height: 1.5;
         font-size: 28px;
-        padding: 88px 0;
+        padding: 65px 0;
     }
 
     .articulate_en {
@@ -1268,7 +1268,7 @@ padding: 0 5px;
         margin: 0 auto;
         line-height: 1.5;
         font-size: 28px;
-        padding: 88px 0;
+        padding: 50px 0;
     }
 
     .articulate_en {
@@ -1491,7 +1491,7 @@ padding: 0 5px;
 
     .works_box .splide {
         flex-direction: column;
-        gap: 50px;
+        gap: 25px;
     }
 
     .nav_works {
