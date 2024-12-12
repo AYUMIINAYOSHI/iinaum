@@ -31,7 +31,7 @@ div.workpage section ul li {
 div.workpage section ul li div.works {
     background-color: #FFFFFF;
     border: 1px solid #0C4B2F;
-    border-radius: 0 30px 0 0;
+    border-radius: 0 50px 0 0;
     width: 100%;
     height: 100%;
     padding: 1.2em;
@@ -41,6 +41,10 @@ div.workpage section ul li div.works {
 .workpage .works .sen3 {
     margin-top: 1em;
     width: 40%;
+}
+
+.workpage .works .works_date {
+   font-size: 0.8em;
 }
 
 div.workpage section ul li div.works .sen3 span {
@@ -70,7 +74,8 @@ div.workpage section ul li div.works:hover {
 
 
 div.workpage section ul li div.works .works_title {
-    font-size: 1.1em;
+    font-size: 0.9em;
+    line-height: 1.5em;
 }
 
 div.workpage section ul li div.works .view_box {
